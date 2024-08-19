@@ -1,0 +1,172 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-top: 20px;
+}
+
+header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 13px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 30px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #2b4d82;
+}
+
+/* .btn {
+  background-color: #2e8fcb;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 20px;
+} */
+.btn {
+  background-color: #1ea0ff;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 60px;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #5fa6e8;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 150px;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #555;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+  color: #2b4d82;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 10px;
+  }
+
+  .logo img {
+    margin-right: 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .dropdown-menu li {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+}

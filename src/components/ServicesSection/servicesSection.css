@@ -1,0 +1,19 @@
+.services-section {
+  background-color: #1e90ff; /* Matches the blue background */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.services-section h2 {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
