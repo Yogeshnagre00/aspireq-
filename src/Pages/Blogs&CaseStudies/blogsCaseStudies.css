@@ -19,7 +19,7 @@
 
 .tab-button {
   background-color: #f5f5f5;
-  width: 175px;
+  width: 150px;
   height: 50px;
   border: black solid 0.5px;
   padding: 1rem 3rem;
@@ -31,7 +31,7 @@
 
 .tab-button1 {
   background-color: #f5f5f5;
-  width: 175px;
+  width: 150px;
   height: 50px;
   border: black solid 0.5px;
   padding: 1rem 1.5rem;
@@ -52,12 +52,12 @@
 }
 
 .grid {
-  width: 90%;
+  width: 93%;
   margin: 0 auto;
   text-align: start;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .card {
@@ -69,7 +69,7 @@
   overflow: hidden;
   padding: 1.5rem;
   margin-bottom: 40px;
-  width: 90%;
+  width: 93%;
 }
 
 .card img {
@@ -107,26 +107,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
-/* .author-info {
+.author-info {
   display: flex;
   align-items: starts;
   margin-top: 1rem;
 }
 
-.author-logo {
+.card .author-logo {
   width: 40px;
-  height: 40px;
+  height: auto;
   border-radius: 50%;
   margin-right: 10px;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
-.author-name {
+.card .author-name {
+  margin-top: 7px;
   font-size: 1rem;
   color: #333;
-}  */
+}
+.card .date {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #333;
+}
 
 .card h2 {
   font-size: 1.5rem;

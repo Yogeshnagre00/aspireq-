@@ -56,7 +56,7 @@ const BlogsCaseStudies = () => {
                 tag="Blog"
                 time="12 Min"
                 author="Maria Ledntsova"
-                authorImage="./Images/author-image.png"
+                authorImage="./Images/author.png"
                 date="March 12, 2024"
               />
               <BlogCard
@@ -69,7 +69,7 @@ const BlogsCaseStudies = () => {
                 tag="Blog"
                 time="12 Min"
                 author="Maria Ledntsova"
-                authorImage="./Images/author-image.png"
+                authorImage="./Images/author.png"
                 date="March 12, 2024"
               />
               <BlogCard
@@ -82,7 +82,7 @@ const BlogsCaseStudies = () => {
                 tag="Blog"
                 time="12 Min"
                 author="Maria Ledntsova"
-                authorImage="./Images/author-image.png"
+                authorImage="./Images/author.png"
                 date="March 12, 2024"
               />
               <BlogCard
@@ -95,7 +95,7 @@ const BlogsCaseStudies = () => {
                 tag="Blog"
                 time="12 Min"
                 author="Maria Ledntsova"
-                authorImage="./Images/author-image.png"
+                authorImage="./Images/author.png"
                 date="March 12, 2024"
               />
               <BlogCard
@@ -108,7 +108,7 @@ const BlogsCaseStudies = () => {
                 tag="Blog"
                 time="12 Min"
                 author="Maria Ledntsova"
-                authorImage="./Images/author-image.png"
+                authorImage="./Images/author.png"
                 date="March 12, 2024"
               />
               <BlogCard
@@ -121,7 +121,7 @@ const BlogsCaseStudies = () => {
                 tag="Blog"
                 time="12 Min"
                 author="Maria Ledntsova"
-                authorImage="./Images/author-image.png"
+                authorImage="./Images/author.png"
                 date="March 12, 2024"
               />
               {/* Add more BlogCard components as needed */}
