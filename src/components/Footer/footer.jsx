@@ -7,7 +7,7 @@ export const Footer = () => {
         <div className="row">
           <div className="col-md-3">
             <div className="footer-logo">
-              <img src="./Assests/Frame 27319.png" alt="AspireQ Logo" />
+              <img src="./Images/Frame 27319.png" alt="AspireQ Logo" />
             </div>
             <p className="footer-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
@@ -52,12 +52,6 @@ export const Footer = () => {
               <li>
                 <a href="#">E-commerce</a>
               </li>
-              <li>
-                <a href="#">Manufacturing</a>
-              </li>
-              <li>
-                <a href="#">Logistics</a>
-              </li>
             </ul>
           </div>
           <div className="col-md-3 ">
@@ -75,13 +69,19 @@ export const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-social">
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin-in"></i>
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-youtube"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-instagram"></i>
             </a>
           </div>
           <p className="footer-copyright">

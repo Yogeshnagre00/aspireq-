@@ -18,9 +18,9 @@ const ImageSlider = () => {
   };
 
   const images = [
-    "./Assests/software resting.jpg",
-    "./Assests/image 1 (1).png",
-    "./Assests/testing.jpg",
+    "./Images/software resting.jpg",
+    "./Images/image 1 (1).png",
+    "./Images/testing.jpg",
   ];
 
   return (

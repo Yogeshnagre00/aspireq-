@@ -19,21 +19,30 @@ const ContactForm = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+    console.log(formData);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
     console.log("Form Submitted:", formData);
+    alert("Form submitted successfully!");
+
+    // Reset form fields
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      mobile: "",
+      message: "",
+    });
   };
 
   return (
     <>
       <Navbar />
       <div className="contact-form-container">
-        <h1 className="contacth1">
-          Contact us
-        </h1>
+        <h1 className="contacth1">Contact us</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur. Eleifend nec morbi tellus
           vitae leo nunc.
@@ -103,7 +112,7 @@ const ContactForm = () => {
             />
           </div>
           <button type="submit" className="submit-btn">
-            Submit &rarr;
+            Submit
           </button>
         </form>
       </div>

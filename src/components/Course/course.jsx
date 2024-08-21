@@ -4,7 +4,7 @@ const courses = [
   {
     title: "Manual Testing",
     description: "Learn the essentials of manual software testing.",
-    image: "./Assests/manual testing.jpg",
+    image: "./Images/manual testing.jpg",
     bestseller: true,
     discount: "15% Off",
     rating: 4.7,
@@ -12,7 +12,7 @@ const courses = [
   {
     title: "Software Testing",
     description: "Master software testing techniques and tools.",
-    image: "./Assests/software resting.jpg",
+    image: "./Images/software resting.jpg",
     bestseller: true,
     discount: "20% Off",
     rating: 4.8,
@@ -20,7 +20,7 @@ const courses = [
   {
     title: "Automated Testing",
     description: "Automate your testing process with the latest tools.",
-    image: "./Assests/testing.jpg",
+    image: "./Images/testing.jpg",
     bestseller: true,
     discount: "25% Off",
     rating: 4.9,

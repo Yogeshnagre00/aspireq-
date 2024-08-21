@@ -1,7 +1,7 @@
 .contact-form-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 90px;
+  padding: 80px;
   text-align: center;
   font-family: "Poppins", sans-serif;
 }
@@ -10,10 +10,11 @@
   color: #333;
   font-weight: bold;
   margin-bottom: 30px;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #666;
   margin-bottom: 30px;
 }

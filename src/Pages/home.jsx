@@ -7,6 +7,7 @@ import HeroSection from "../components/HeroSection/heroSection";
 import ImageSlider from "../components/Imageslider/imageslider";
 import ServicesSection from "../components/ServicesSection/servicesSection";
 
+
 function Home() {
   return (
     <div className="App">

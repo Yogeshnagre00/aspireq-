@@ -9,7 +9,7 @@ const Navbar = () => {
     <header>
       <nav className="navbar">
         <div className="logo">
-          <img src="./Assests/Frame 27319.png" alt="Logo" />
+          <img src="./Images/Frame 27319.png" alt="Logo" />
         </div>
         <ul className="nav-links">
           <li>
@@ -31,11 +31,12 @@ const Navbar = () => {
             </ul>
           </li>
           <li>
-            <a href="#">BLOGS & CASE STUDIES</a>
+            {/* <a href="#">BLOGS & CASE STUDIES</a> */}
+            <Link to="/BlogsCaseStudies">BLOGS & CASE STUDIES</Link>
           </li>
           {/* Dropdown for ABOUT US */}
           <li className="dropdown">
-            <a href="#">ABOUT US</a>
+            <a href="#">ABOUT Us</a>
             <ul className="dropdown-menu">
               <li>
                 <a href="#">Our Team</a>
@@ -49,7 +50,7 @@ const Navbar = () => {
             </ul>
           </li>
           <li>
-            <Link to="/contactUs">CONTACT</Link>
+            <Link to="/contactUs">CONTACT Us</Link>
           </li>
         </ul>
         <a href="#" className="btn" onClick={handleRedirect}>
