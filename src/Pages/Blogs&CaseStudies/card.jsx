@@ -24,7 +24,7 @@ export const BlogCard = ({
       <p>{description}</p>
       <div className="meta">
         <div className="author-info">
-          <img src={authorImage} alt="Author" className="author-logo" />
+          <img src={authorImage} alt="" className="author-logo" />
           <span className="author-name">{author}</span>
         </div>
         <span className="date">{date}</span>
