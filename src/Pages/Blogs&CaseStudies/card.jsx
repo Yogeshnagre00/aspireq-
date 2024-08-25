@@ -55,7 +55,7 @@ export const CaseStudyCard = ({
   date,
 }) => (
   <div className="card">
-    <img src={imageSrc} alt={title} />
+    <img src={imageSrc} alt={title} loading="lazy" />
     <div className="card-content">
       <div className="meta">
         <span className={`tag ${tag.toLowerCase().replace(" ", "-")}`}>

@@ -12,15 +12,15 @@ const ImageSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: "27%",
+    centerPadding: "25%",
     // autoplay: true,
     // autoplaySpeed: 3000,
   };
 
   const images = [
-    "./Images/software resting.jpg",
     "./Images/image 1 (1).png",
     "./Images/testing.jpg",
+    "./Images/software resting.jpg",
   ];
 
   return (
@@ -28,7 +28,7 @@ const ImageSlider = () => {
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="slider-item">
-            <img src={image} alt={`Slide ${index + 1}`} />
+            <img src={image} alt={`Slide ${index + 1}`} loading="lazy" />
           </div>
         ))}
       </Slider>

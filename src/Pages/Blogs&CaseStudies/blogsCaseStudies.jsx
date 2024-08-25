@@ -47,7 +47,7 @@ const BlogsCaseStudies = () => {
             <div className="grid">
               {/* Blog Cards */}
               <BlogCard
-                title="Global App Testing Blog"
+                title="The Rise of Telemedicine: How Virtual Care is Revolutionizing Healthcare Delivery"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit
                 ametLorem ipsum doljer foit amet Lorem ipsum
@@ -60,7 +60,7 @@ const BlogsCaseStudies = () => {
                 date="March 12, 2024"
               />
               <BlogCard
-                title="Global App Testing Blog"
+                title="Telemedicine and Mental Health: Breaking Barriers to Access and Stigma"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit
                 ametLorem ipsum doljer foit amet Lorem ipsum
@@ -73,7 +73,7 @@ const BlogsCaseStudies = () => {
                 date="March 12, 2024"
               />
               <BlogCard
-                title="Global App Testing Blog"
+                title="Enhancing Guest Experience: Innovative Strategies for Modern Hotels"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit
                 ametLorem ipsum doljer foit amet Lorem ipsum
@@ -86,7 +86,7 @@ const BlogsCaseStudies = () => {
                 date="March 12, 2024"
               />
               <BlogCard
-                title="Global App Testing Blog"
+                title="Sustainable Practices in Hotel Management: Going Green Without Compromising Luxury"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit
                 ametLorem ipsum doljer foit amet Lorem ipsum
@@ -99,7 +99,7 @@ const BlogsCaseStudies = () => {
                 date="March 12, 2024"
               />
               <BlogCard
-                title="Global App Testing Blog"
+                title="The Impact of Fintech on Traditional Banking: Opportunities and Challenges"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit
                 ametLorem ipsum doljer foit amet Lorem ipsum
@@ -112,7 +112,7 @@ const BlogsCaseStudies = () => {
                 date="March 12, 2024"
               />
               <BlogCard
-                title="Global App Testing Blog"
+                title="Navigating the Future of Investment Banking: Trends and Innovations to Watch"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit
                 ametLorem ipsum doljer foit amet Lorem ipsum

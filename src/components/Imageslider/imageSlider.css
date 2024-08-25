@@ -8,46 +8,52 @@
 
 .slider-item {
   transition: transform 0.3s ease, filter 0.3s ease;
+  /* margin: 0 30px; */
 }
 
 .image-slider img {
-  width: 100%;
-  max-width: 1200px;
+  width: 90%;
+  max-width: 1300px;
   margin: 0 auto;
   display: block;
-  border-radius: 20px;
+  border-radius: 30px;
   object-fit: cover;
   object-position: center;
 }
 
+.slick-slide {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
 .slick-center img {
-  transform: scale(1.3);
+  transform: scale(1.2);
   filter: blur(0);
+  border-radius: 10px;
 }
 
-.slick-slider img {
+.slick-slide:not(.slick-center) img {
   filter: blur(5px);
-  transform: scale(0.9);
+  transform: scale(0.8);
 }
 
-.slick-center .slider-item img {
-  filter: none;
-}
 @media (max-width: 768px) {
   .image-slider img {
     border-radius: 10px;
   }
 }
-/* .slick-prev,
-.slick-next {
-  z-index: 1;
-}
 
+/* Customize dots to be blue */
 .slick-dots li button:before {
-  font-size: 12px;
-  color: #007bff;
+  font-size: 18px;
+  color: #1b7ce3;
 }
 
 .slick-dots li.slick-active button:before {
   color: #1e90ff;
-} */
+}
+
+/* Optional: Customize previous and next arrows */
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}

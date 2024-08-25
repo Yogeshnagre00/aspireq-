@@ -36,7 +36,7 @@ const CourseCards = () => {
         {courses.map((course, index) => (
           <div key={index} className="course-card">
             <div className="course-image">
-              <img src={course.image} alt={course.title} />
+              <img src={course.image} alt={course.title} loading="lazy" />
               {course.bestseller && course.discount && (
                 <div className="custom-label">
                   <span className="label-bestseller">Bestseller</span>

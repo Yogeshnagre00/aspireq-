@@ -1,3 +1,5 @@
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 import "./footer.css";
 
 export const Footer = () => {
@@ -81,12 +83,13 @@ export const Footer = () => {
               <i className="fab fa-youtube"></i>
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram"></i>
+              {/* <i className="fab fa-instagram"></i> */}
+              <i className="fa-brands fa-square-instagram"></i>
             </a>
+            <p className="footer-copyright">
+              Copyright © 2024 aspireq. All rights reserved.
+            </p>
           </div>
-          <p className="footer-copyright">
-            Copyright © 2024 aspireq. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>
