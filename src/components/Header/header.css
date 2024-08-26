@@ -6,14 +6,31 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-display: swap;
   margin: 0;
   padding-top: 20px;
 }
 
+/* CSS Variables */
+:root {
+  --header-bg-color: white;
+  --header-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --navbar-padding: 0 6rem;
+  --nav-link-color: #555;
+  --nav-link-hover-color: #2b4d82;
+  --btn-bg-color: #1ea0ff;
+  --btn-hover-bg-color: #5fa6e8;
+  --dropdown-bg-color: white;
+  --dropdown-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --dropdown-link-hover-bg-color: #f0f0f0;
+  --dropdown-link-hover-color: #2b4d82;
+}
+
+/* Header */
 header {
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--header-bg-color);
+  box-shadow: var(--header-box-shadow);
   padding: 13px 0;
   position: fixed;
   top: 0;
@@ -25,12 +42,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 6rem;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
+  padding: var(--navbar-padding);
 }
 
 .logo img {
@@ -45,23 +57,18 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: #555;
+  color: var(--nav-link-color);
   font-size: 15px;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #2b4d82;
+  color: var(--nav-link-hover-color);
 }
 
-/* .btn {
-  background-color: #2e8fcb;
-  color: white;
-  padding: 10px 30px;
-  border-radius: 20px;
-} */
+/* Buttons */
 .btn {
-  background-color: #1ea0ff;
+  background-color: var(--btn-bg-color);
   color: white;
   padding: 10px 25px;
   border-radius: 60px;
@@ -69,13 +76,14 @@ header {
   border: none;
   display: inline-block;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .btn:hover {
-  background-color: #5fa6e8;
+  background-color: var(--btn-hover-bg-color);
 }
 
-/* Dropdown styles */
+/* Dropdown */
 .dropdown {
   position: relative;
 }
@@ -85,8 +93,8 @@ header {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: white;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: var(--dropdown-bg-color);
+  box-shadow: var(--dropdown-box-shadow);
   list-style: none;
   padding: 10px 0;
   margin: 0;
@@ -100,14 +108,14 @@ header {
 
 .dropdown-menu li a {
   text-decoration: none;
-  color: #555;
+  color: var(--nav-link-color);
   display: block;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .dropdown-menu li a:hover {
-  background-color: #f0f0f0;
-  color: #2b4d82;
+  background-color: var(--dropdown-link-hover-bg-color);
+  color: var(--dropdown-link-hover-color);
 }
 
 .dropdown:hover .dropdown-menu {
@@ -119,6 +127,7 @@ header {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    padding: 0 1rem;
   }
 
   .nav-links {

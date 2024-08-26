@@ -12,12 +12,6 @@
   margin-bottom: 30px;
 }
 
-p {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 30px;
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;

@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./header.css";
 
-const handleRedirect = () => {
-  alert("click of let's Talk");
-};
 const Navbar = () => {
+  const location = useLocation(); // Get the current location
+
   return (
     <header>
       <nav className="navbar">
@@ -31,7 +30,6 @@ const Navbar = () => {
             </ul>
           </li>
           <li>
-            {/* <a href="#">BLOGS & CASE STUDIES</a> */}
             <Link to="/BlogsCaseStudies">BLOGS & CASE STUDIES</Link>
           </li>
           {/* Dropdown for ABOUT US */}
@@ -53,9 +51,20 @@ const Navbar = () => {
             <Link to="/contactUs">CONTACT Us</Link>
           </li>
         </ul>
-        <a href="#" className="btn" onClick={handleRedirect}>
-          Let&apos;s Talk &rarr;
-        </a>
+        {/* Conditionally render the button text and functionality based on the current path */}
+        {location.pathname === "/" ? (
+          <a
+            href="#"
+            className="btn"
+            onClick={() => alert("Click of Let's Talk")}
+          >
+            Let&apos;s Talk &rarr;
+          </a>
+        ) : (
+          <Link to="/" className="btn">
+            Home Page
+          </Link>
+        )}
       </nav>
     </header>
   );
