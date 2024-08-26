@@ -76,7 +76,7 @@ const ContactForm = () => {
     <>
       <Navbar />
       <div className="contact-form-container">
-        <h1 className="contacth1">Contact us</h1>
+        <h1 className="contacth1">Contact Us</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur. Eleifend nec morbi tellus
           vitae leo nunc.
