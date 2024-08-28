@@ -17,3 +17,35 @@
   max-width: 1000px;
   margin: 0 auto;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 40px 15px;
+  }
+
+  .services-section h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .services-grid {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+    padding: 30px 10px;
+  }
+
+  .services-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+}

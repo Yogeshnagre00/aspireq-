@@ -83,6 +83,11 @@ header {
   background-color: var(--btn-hover-bg-color);
 }
 
+/* Hidden Class to Maintain Layout */
+.hidden {
+  visibility: hidden; /* Keeps the element in the flow and preserves its layout space */
+}
+
 /* Dropdown */
 .dropdown {
   position: relative;

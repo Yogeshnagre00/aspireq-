@@ -20,7 +20,6 @@
   font-size: 3rem;
   font-weight: 800;
   margin: 20px 0;
-  /* line-height: 1.2; */
   color: var(--text-color);
 }
 
@@ -34,6 +33,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap; /* Allows buttons to stack on smaller screens */
 }
 
 .btn-primary,
@@ -62,4 +62,45 @@
 
 .btn-secondary:hover {
   background-color: var(--secondary-hover-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 0.9rem;
+    padding: 12px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 50px 10px 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 0.8rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .hero-buttons {
+    gap: 10px;
+  }
 }

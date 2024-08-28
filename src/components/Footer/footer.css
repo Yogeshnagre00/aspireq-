@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
 .body-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 .content {
   flex: 1;
 }
@@ -21,26 +23,23 @@
 .container {
   width: 93%;
   margin: 0 auto;
-  /* padding: 0 2.5rem; */
 }
-/* p {
-  margin-bottom: 0 !important;
-} */
 
 .row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 .col-md-3 {
+  flex: 1;
   padding: 0 30px;
   margin-bottom: 10px;
   font-family: "Poppins", sans-serif;
 }
 
-/* Added: Ensure logo is centered in its column */
+/* Ensure logo is centered in its column */
 .footer-logo img {
   max-width: 100%;
   height: auto;
@@ -49,7 +48,6 @@
 .footer-text {
   width: 30%;
   margin-top: 30px;
-  /* font-family: "Poppins", sans-serif; */
 }
 
 /* Footer Heading styles */
@@ -83,11 +81,13 @@
   color: #333;
 }
 
-/* Adjusted text alignment for social media icons */
+/* Adjust text alignment for social media icons */
 .footer-bottom {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
+
 .footer-social {
   text-align: end;
   margin-top: 10px;
@@ -118,26 +118,40 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .row {
-    flex-direction: column;
+    justify-content: space-between;
   }
 
   .col-md-3 {
-    flex: 1 0 100%; /* Full width on mobile */
-    text-align: center;
-    padding: 0 10px;
-    margin-bottom: 20px;
+    padding: 0 15px;
+    margin-bottom: 0;
   }
 
   .footer-heading {
     font-size: 1.1em;
   }
 
-  .footer-links li,
-  .footer-contact li {
-    margin-bottom: 8px;
+  .footer-social {
+    text-align: center;
+    margin-top: 10px;
   }
 
-  .footer-social {
-    margin-bottom: 10px;
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 15px 0 15px;
+  }
+
+  .col-md-3 {
+    padding: 0 10px;
+    flex: 1 1 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
   }
 }
