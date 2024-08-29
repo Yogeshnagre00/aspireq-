@@ -1,5 +1,4 @@
 import ContactSection from "../components/ContactSection/contact";
-import CourseCards from "../components/Course/course";
 import FAQSection from "../components/FAQSection/faqSection";
 import { Footer } from "../components/Footer/footer";
 import Navbar from "../components/Header/header";
@@ -14,7 +13,6 @@ function Home() {
       <HeroSection />
       <ImageSlider />
       <ServicesSection />
-      <CourseCards />
       <FAQSection />
       <ContactSection />
       <Footer />

@@ -15,7 +15,7 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
-    email: "",
+    Email: "",
     mobile: "",
     message: "",
   });
@@ -33,6 +33,15 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // Match keys to the Google Apps Script expectations
+    const dataToSend = {
+      FirstName: formData.firstName,
+      LastName: formData.lastName,
+      EmailID: formData.email,
+      MobileNumber: formData.mobile,
+      Message: formData.message,
+    };
+
     try {
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycbyUBf46iZy1jsaw1gmEYcd4LgfhiuQiCfrlxy7uJmx9i79IxLEEHfPKHfZWrCoJpFTonQ/exec?action=writecontactdetails",
@@ -42,7 +51,7 @@ const ContactForm = () => {
           headers: {
             "Content-Type": "text/plain; charset-utf-8",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(dataToSend),
         }
       );
 
@@ -141,7 +150,7 @@ const ContactForm = () => {
               id="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Type here..."
+              placeholder="Type here."
               required
             />
           </div>
