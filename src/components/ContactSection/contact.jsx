@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom"; // Import useLocation hook
 import "./contact.css";
 
 export const ContactSection = () => {
   const [email, setEmail] = useState("");
+  const location = useLocation(); // Get the current route
 
   const handleChange = (e) => {
     setEmail(e.target.value);
@@ -11,13 +13,17 @@ export const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email.trim()) {
-      // Handle email submission (e.g., send it to an API or another file)
       console.log("Email submitted:", email);
       setEmail(""); // Clear input after submission
     } else {
       alert("Please enter a valid email address.");
     }
   };
+
+  // Conditionally render the contact section only if not on the Contact Us page
+  if (location.pathname === "/contactUs") {
+    return null; // Don't render the section
+  }
 
   return (
     <section className="contact-section">
