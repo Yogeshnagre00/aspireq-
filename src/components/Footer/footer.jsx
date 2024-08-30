@@ -20,12 +20,6 @@ export const Footer = () => {
             <h4 className="footer-heading">Company</h4>
             <ul className="footer-links">
               <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="#">FAQ</a>
-              </li>
-              <li>
                 <a href="#">Privacy Policy</a>
               </li>
               <li>

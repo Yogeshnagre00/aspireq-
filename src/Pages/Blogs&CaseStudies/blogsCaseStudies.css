@@ -53,6 +53,7 @@
 
 .grid {
   width: 93%;
+  height: auto;
   margin: 0 auto;
   text-align: start;
   display: grid;

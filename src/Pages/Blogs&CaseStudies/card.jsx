@@ -10,7 +10,6 @@ export const BlogCard = ({
   authorImage,
   date,
 }) => (
-  // const tagClass = tag.toLowerCase().replace(" ", "-");
   <div className="card">
     <img src={imageSrc} alt={title} />
     <div className="card-content">
@@ -27,9 +26,8 @@ export const BlogCard = ({
           <img src={authorImage} alt="" className="author-logo" />
           <span className="author-name">{author}</span>
         </div>
+
         <span className="date">{date}</span>
-        {/* </div>
-        <span>{date}</span> */}
       </div>
     </div>
   </div>
