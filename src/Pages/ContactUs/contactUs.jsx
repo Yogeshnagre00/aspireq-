@@ -3,12 +3,8 @@ import { Footer } from "../../components/Footer/footer";
 import Navbar from "../../components/Header/header";
 import "./contactUs.css";
 
-// Lazy load components
 const FAQSection = React.lazy(() =>
   import("../../components/FAQSection/faqSection")
-);
-const ContactSection = React.lazy(() =>
-  import("../../components/ContactSection/contact")
 );
 
 const ContactForm = () => {
@@ -22,6 +18,10 @@ const ContactForm = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Add state for modal message and visibility
+  const [modalMessage, setModalMessage] = useState("");
+  const [showModal, setShowModal] = useState(false);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -33,7 +33,6 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Match keys to the Google Apps Script expectations
     const dataToSend = {
       FirstName: formData.firstName,
       LastName: formData.lastName,
@@ -56,10 +55,10 @@ const ContactForm = () => {
       );
 
       if (response.ok) {
-        const result = await response.json();
-        console.log("Form Submitted:", formData);
-        console.log("Server Response:", result);
-        alert("Form submitted successfully!");
+        setModalMessage(
+          "Thank you for reaching out to us, we will connect with you soon!"
+        );
+        setShowModal(true);
         setFormData({
           firstName: "",
           lastName: "",
@@ -68,14 +67,17 @@ const ContactForm = () => {
           message: "",
         });
       } else {
-        console.error("Server returned an error:", response.status);
-        alert(
+        setModalMessage(
           "There was an error on the server side while submitting the form. Please try again."
         );
+        setShowModal(true);
       }
     } catch (error) {
-      console.error("Error during form submission:", error);
-      alert("There was an error submitting the form. Please try again.");
+      console.error("Error during form submission:", error); // Log the error to the console
+      setModalMessage(
+        "There was an error submitting the form. Please try again."
+      );
+      setShowModal(true);
     } finally {
       setIsSubmitting(false);
     }
@@ -160,10 +162,24 @@ const ContactForm = () => {
         </form>
       </div>
 
-      {/* Suspense fallback is shown while the lazy-loaded component is being fetched */}
+      {/* Modal for displaying messages */}
+      {showModal && (
+        <div className="custom-modal-overlay">
+          <div className="custom-modal-content">
+            <div className="custom-modal-header">Aspireq</div>
+            <div className="custom-modal-message">{modalMessage}</div>
+            <button
+              className="custom-modal-button"
+              onClick={() => setShowModal(false)}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
+
       <Suspense fallback={<div>Loading...</div>}>
         <FAQSection />
-        <ContactSection />
       </Suspense>
       <Footer />
     </>
