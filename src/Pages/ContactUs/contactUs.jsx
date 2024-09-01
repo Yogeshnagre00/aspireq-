@@ -11,7 +11,7 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
-    Email: "",
+    email: "",
     mobile: "",
     message: "",
   });
@@ -43,7 +43,7 @@ const ContactForm = () => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyUBf46iZy1jsaw1gmEYcd4LgfhiuQiCfrlxy7uJmx9i79IxLEEHfPKHfZWrCoJpFTonQ/exec?action=writecontactdetails",
+        "https://script.google.com/macros/s/AKfycbwmakg-xSlMoRiW-n_10BChKkHvsWBVLDnfxaJjPVE5QPfuIEat2YsQxR5YZORYG2k-rw/exec?action=writecontactdetails",
         {
           redirect: "follow",
           method: "POST",
@@ -73,9 +73,8 @@ const ContactForm = () => {
         setShowModal(true);
       }
     } catch (error) {
-      console.error("Error during form submission:", error); // Log the error to the console
       setModalMessage(
-        "There was an error submitting the form. Please try again."
+        `There was an error submitting the form: ${error.message}. Please try again.`
       );
       setShowModal(true);
     } finally {

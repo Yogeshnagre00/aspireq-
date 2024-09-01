@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
+import NotFound from "./components/notFound";
 
 const BlogsCaseStudies = React.lazy(() =>
   import("./Pages/Blogs&CaseStudies/blogsCaseStudies")
@@ -16,6 +17,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contactUs" element={<ContactForm />} />
           <Route path="/BlogsCaseStudies" element={<BlogsCaseStudies />} />
+          <Route path="*" element={<NotFound />} />{" "}
+          {/* Fallback route for undefined paths */}
         </Routes>
       </Suspense>
     </Router>
