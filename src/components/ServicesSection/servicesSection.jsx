@@ -4,24 +4,29 @@ import "./servicesSection.css";
 const ServicesSection = () => {
   const services = [
     {
-      title: "Manual Testing",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "Custom Software Development",
+      description:
+        "Creating tailored software solutions to meet specific business requirements.",
     },
     {
-      title: "Automated Testing",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "Web Development",
+      description:
+        " Building functional and engaging websites and web applications",
     },
     {
-      title: "Performance Testing",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "Mobile App Development",
+      description:
+        " Developing mobile applications for iOS, Android, and other platforms.",
     },
     {
-      title: "Website Testing",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: " QA and Testing",
+      description:
+        " Ensuring software quality through rigorous testing and quality assurance processes.",
     },
     {
-      title: "Mobile App Testing",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "IT Consulting",
+      description:
+        " Providing expert advice on IT strategy, technology roadmaps, and digital transformation",
     },
     {
       title: "Software Testing",
