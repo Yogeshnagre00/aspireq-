@@ -32,17 +32,6 @@ const Navbar = () => {
           {/* Dropdown for ABOUT US */}
           <li className="dropdown">
             <a href="#">ABOUT US</a>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#">Our Team</a>
-              </li>
-              <li>
-                <a href="#">Our Story</a>
-              </li>
-              <li>
-                <a href="#">Careers</a>
-              </li>
-            </ul>
           </li>
           <li>
             <Link to="/contactUs">CONTACT US</Link>

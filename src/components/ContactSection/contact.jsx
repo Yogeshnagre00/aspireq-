@@ -4,7 +4,9 @@ import "./contact.css";
 
 export const ContactSection = () => {
   const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false); // Add loading state
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showModal, setShowModal] = useState(false);  // State for modal visibility
+  const [modalMessage, setModalMessage] = useState("");  // State for modal message
   const location = useLocation();
 
   const handleChange = (e) => {
@@ -35,23 +37,24 @@ export const ContactSection = () => {
         const responseData = await response.json();
 
         if (response.ok) {
-          // console.log("Email submitted:", email);
-          alert("Thank you! Your email has been submitted.");
+          setModalMessage("Thank you! Your email has been submitted.");
+          setShowModal(true);
           setEmail("");
         } else {
           console.error("Error from server:", responseData);
-          alert("There was an error submitting your email. Please try again.");
+          setModalMessage("There was an error submitting your email. Please try again.");
+          setShowModal(true);
         }
       } catch (error) {
         console.error("Error during submission:", error);
-        alert(
-          "An error occurred while submitting your email. Please try again."
-        );
+        setModalMessage("An error occurred while submitting your email. Please try again.");
+        setShowModal(true);
       } finally {
         setIsSubmitting(false);
       }
     } else {
-      alert("Please enter a valid email address.");
+      setModalMessage("Please enter a valid email address.");
+      setShowModal(true);
     }
   };
 
@@ -60,23 +63,46 @@ export const ContactSection = () => {
   }
 
   return (
-    <section className="contact-section">
-      <div className="contact-container">
-        <h1>Get started with a free 30 minute consultation with an expert.</h1>
-        <form className="inputWithButton" onSubmit={handleSubmit}>
-          <input
-            type="email"
-            placeholder="Your Email Address"
-            value={email}
-            onChange={handleChange}
-          />
-          <button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Submitting..." : "Submit"}
-            {!isSubmitting && <span>&#10132;</span>}
-          </button>
-        </form>
-      </div>
-    </section>
+    <>
+      <section className="contact-section">
+        <div className="contact-container">
+          <h1>Get started with a free 30 minute consultation with an expert.</h1>
+          <form className="inputWithButton" onSubmit={handleSubmit}>
+            <input
+              type="email"
+              placeholder="Your Email Address"
+              value={email}
+              onChange={handleChange}
+            />
+            <button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Submitting..." : "Submit"}
+              {!isSubmitting && <span>&#10132;</span>}
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {showModal && (
+        <div className="custom-modal-overlay">
+          <div className="custom-modal-content">
+            <button
+              className="custom-modal-close"
+              onClick={() => setShowModal(false)}
+            >
+              ✕
+            </button>
+            <div className="custom-modal-header">Aspireq</div>
+            <div className="custom-modal-message">{modalMessage}</div>
+            <button
+              className="custom-modal-button"
+              onClick={() => setShowModal(false)}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

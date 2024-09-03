@@ -47,6 +47,7 @@ const BlogsCaseStudies = () => {
             <div className="grid">
               {/* Blog Cards */}
               <BlogCard
+                id="1"
                 title="The Rise of Telemedicine: How Virtual Care is Revolutionizing Healthcare Delivery"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit
@@ -60,6 +61,7 @@ const BlogsCaseStudies = () => {
                 date="March 12, 2024"
               />
               <BlogCard
+                id="2"
                 title="Telemedicine and Mental Health: Breaking Barriers to Access and Stigma"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit
@@ -73,6 +75,7 @@ const BlogsCaseStudies = () => {
                 date="March 12, 2024"
               />
               <BlogCard
+                id="3"
                 title="Enhancing Guest Experience: Innovative Strategies for Modern Hotels"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit
@@ -86,6 +89,7 @@ const BlogsCaseStudies = () => {
                 date="March 12, 2024"
               />
               <BlogCard
+                id="4"
                 title="Sustainable Practices in Hotel Management: Going Green Without Compromising Luxury"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit
@@ -99,6 +103,7 @@ const BlogsCaseStudies = () => {
                 date="March 12, 2024"
               />
               <BlogCard
+                id="5"
                 title="The Impact of Fintech on Traditional Banking: Opportunities and Challenges"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit
@@ -112,6 +117,7 @@ const BlogsCaseStudies = () => {
                 date="March 12, 2024"
               />
               <BlogCard
+                id="6"
                 title="Navigating the Future of Investment Banking: Trends and Innovations to Watch"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit
@@ -133,6 +139,7 @@ const BlogsCaseStudies = () => {
               {/* Case Study Cards */}
 
               <CaseStudyCard
+                id="1"
                 title="QA Case Study"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit
@@ -144,6 +151,7 @@ const BlogsCaseStudies = () => {
                 date="March 12, 2024"
               />
               <CaseStudyCard
+                id="2"
                 title="QA Case Study"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit
@@ -155,6 +163,7 @@ const BlogsCaseStudies = () => {
                 date="March 12, 2024"
               />
               <CaseStudyCard
+                id="3"
                 title="QA Case Study"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit
@@ -166,6 +175,7 @@ const BlogsCaseStudies = () => {
                 date="March 12, 2024"
               />
               <CaseStudyCard
+                id="4"
                 title="QA Case Study"
                 imageSrc="./Images/csaestudies.png"
                 description="Lorem ipsum doller foit amet Lorem ipsum doller foit

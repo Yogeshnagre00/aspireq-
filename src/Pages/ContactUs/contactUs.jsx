@@ -165,6 +165,12 @@ const ContactForm = () => {
       {showModal && (
         <div className="custom-modal-overlay">
           <div className="custom-modal-content">
+            <button
+              className="custom-modal-close"
+              onClick={() => setShowModal(false)}
+            >
+              ✕
+            </button>
             <div className="custom-modal-header">Aspireq</div>
             <div className="custom-modal-message">{modalMessage}</div>
             <button
