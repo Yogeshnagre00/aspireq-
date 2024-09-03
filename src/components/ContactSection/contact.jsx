@@ -2,71 +2,67 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./contact.css";
 
-export const ContactSection = () => {
+const ContactSection = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showModal, setShowModal] = useState(false);  // State for modal visibility
-  const [modalMessage, setModalMessage] = useState("");  // State for modal message
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
   const location = useLocation();
 
-  const handleChange = (e) => {
-    setEmail(e.target.value);
-  };
+  const handleChange = (e) => setEmail(e.target.value);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email.trim()) {
-      const emailToSend = {
-        Email: email,
-      };
-      setIsSubmitting(true);
-
-      try {
-        const response = await fetch(
-          "https://script.google.com/macros/s/AKfycbwmakg-xSlMoRiW-n_10BChKkHvsWBVLDnfxaJjPVE5QPfuIEat2YsQxR5YZORYG2k-rw/exec?action=emailconsultation",
-          {
-            redirect: "follow",
-            method: "POST",
-            headers: {
-              "Content-Type": "text/plain; charset-utf-8",
-            },
-            body: JSON.stringify(emailToSend),
-          }
-        );
-
-        const responseData = await response.json();
-
-        if (response.ok) {
-          setModalMessage("Thank you! Your email has been submitted.");
-          setShowModal(true);
-          setEmail("");
-        } else {
-          console.error("Error from server:", responseData);
-          setModalMessage("There was an error submitting your email. Please try again.");
-          setShowModal(true);
-        }
-      } catch (error) {
-        console.error("Error during submission:", error);
-        setModalMessage("An error occurred while submitting your email. Please try again.");
-        setShowModal(true);
-      } finally {
-        setIsSubmitting(false);
-      }
-    } else {
+    if (!email.trim()) {
       setModalMessage("Please enter a valid email address.");
       setShowModal(true);
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwmakg-xSlMoRiW-n_10BChKkHvsWBVLDnfxaJjPVE5QPfuIEat2YsQxR5YZORYG2k-rw/exec?action=emailconsultation",
+        {
+          method: "POST",
+          headers: { "Content-Type": "text/plain; charset-utf-8" },
+          body: JSON.stringify({ Email: email }),
+        }
+      );
+
+      if (response.ok) {
+        setModalMessage(
+          <>
+            Email successfully submitted. <br />
+            Thank you! Your email has been submitted.
+          </>
+        );
+        setEmail("");
+      } else {
+        setModalMessage(
+          "There was an error submitting your email. Please try again."
+        );
+      }
+    } catch (error) {
+      console.error("Error during submission:", error);
+      setModalMessage(
+        "An error occurred while submitting your email. Please try again."
+      );
+    } finally {
+      setShowModal(true);
+      setIsSubmitting(false);
     }
   };
 
-  if (location.pathname === "/contactUs") {
-    return null; // Don't render the section
-  }
+  if (location.pathname === "/contactUs") return null;
 
   return (
     <>
       <section className="contact-section">
         <div className="contact-container">
-          <h1>Get started with a free 30 minute consultation with an expert.</h1>
+          <h1>
+            Get started with a free 30-minute consultation with an expert.
+          </h1>
           <form className="inputWithButton" onSubmit={handleSubmit}>
             <input
               type="email"
@@ -75,7 +71,7 @@ export const ContactSection = () => {
               onChange={handleChange}
             />
             <button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit"}
+              {isSubmitting ? "Submitting..." : "Submit"}{" "}
               {!isSubmitting && <span>&#10132;</span>}
             </button>
           </form>
@@ -107,3 +103,10 @@ export const ContactSection = () => {
 };
 
 export default ContactSection;
+
+{
+  /* <i
+  className="fa-solid fa-circle-check"
+  style={{ color: "#0daf36", margin: 0 }}
+></i>; */
+}

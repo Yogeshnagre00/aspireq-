@@ -1,16 +1,17 @@
-/* Contact Section Styling */
 .contact-section {
   padding: 40px 30px;
   display: flex;
   max-width: 80%;
-  min-width: none;
-  margin: 0 auto;
-  margin-bottom: 5%;
+  margin: 0 auto 5%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 40px;
-  background: linear-gradient(135deg, #28739f 0%, #0684f2 100%);
+  background-image: url("./Images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 270px;
 }
 
 .contact-container {
@@ -24,24 +25,22 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 30px;
   text-align: center;
 }
 
-/* Input and Button Styling */
 .inputWithButton {
   display: flex;
   background-color: #fff;
   border-radius: 50px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 5px;
-  overflow: hidden;
 }
 
 .inputWithButton input {
   flex: 1;
-  padding: 10px 10px;
+  padding: 10px;
   border: none;
   border-radius: 50px 0 0 50px;
   font-size: 1rem;
@@ -75,11 +74,9 @@ h1 {
   margin-left: 10px;
 }
 
-/* Adjust input and button for mobile */
 @media (max-width: 600px) {
   .inputWithButton {
     flex-direction: column;
-    border-radius: 50px;
   }
 
   .inputWithButton input,
@@ -96,11 +93,11 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); 
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; 
+  z-index: 1000;
 }
 
 .custom-modal-content {
@@ -124,12 +121,13 @@ h1 {
 }
 
 .custom-modal-close:hover {
-  color: #ff0000; 
+  color: #ff0000;
 }
 
 .custom-modal-header {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 21px;
+  margin-bottom: 12px;
+  color: blue;
 }
 
 .custom-modal-message {
@@ -137,14 +135,15 @@ h1 {
 }
 
 .custom-modal-button {
-  background-color: #007bff;
+  background-color: #0946ee;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 30px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 20px;
+  margin-left: 80%;
 }
 
 .custom-modal-button:hover {
-  background-color: #0056b3; 
+  background-color: #0056b3;
 }
