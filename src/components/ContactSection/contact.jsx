@@ -25,10 +25,8 @@ const ContactSection = () => {
         "https://script.google.com/macros/s/AKfycbwmakg-xSlMoRiW-n_10BChKkHvsWBVLDnfxaJjPVE5QPfuIEat2YsQxR5YZORYG2k-rw/exec?action=emailconsultation",
         {
           method: "POST",
-          //headers: { "Content-Type": "text/plain; charset-utf-8" },
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "text/plain; charset-utf-8" },
+
           body: JSON.stringify({ Email: email }),
         }
       );
