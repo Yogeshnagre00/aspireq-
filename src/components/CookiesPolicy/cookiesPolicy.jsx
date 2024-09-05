@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import "./CookiesPolicy.css";
+import "./cookiesPolicy.css";
 
 const CookiesPolicy = () => {
   const navigate = useNavigate();
