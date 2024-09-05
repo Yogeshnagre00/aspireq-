@@ -19,11 +19,8 @@ const CookiesPolicy = () => {
         Back to Home
       </button>
 
-      <header style={{ padding: "10px 0" }}>
-        <h1 style={{ margin: "0", padding: "10px", textAlign: "left" }}>
-          Cookies Policy
-        </h1>
-      </header>
+      <h1>Cookies Policy</h1>
+
       <section className="content">
         <p>
           When you visit the Aspireq Sites, Aspireq uses a number of suppliers
