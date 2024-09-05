@@ -1,4 +1,5 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Link } from "react-router-dom";
 
 import "./footer.css";
 
@@ -26,7 +27,7 @@ export const Footer = () => {
                 <a href="#">Terms of Service</a>
               </li>
               <li>
-                <a href="#">Cookies</a>
+                <Link to="/CookiesPolicy">Cookies</Link>
               </li>
             </ul>
           </div>

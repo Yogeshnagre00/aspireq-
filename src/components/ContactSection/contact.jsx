@@ -25,7 +25,10 @@ const ContactSection = () => {
         "https://script.google.com/macros/s/AKfycbwmakg-xSlMoRiW-n_10BChKkHvsWBVLDnfxaJjPVE5QPfuIEat2YsQxR5YZORYG2k-rw/exec?action=emailconsultation",
         {
           method: "POST",
-          headers: { "Content-Type": "text/plain; charset-utf-8" },
+          //headers: { "Content-Type": "text/plain; charset-utf-8" },
+          headers: {
+            "Content-Type": "application/json",
+          },
           body: JSON.stringify({ Email: email }),
         }
       );
@@ -33,14 +36,33 @@ const ContactSection = () => {
       if (response.ok) {
         setModalMessage(
           <>
-            Email successfully submitted. <br />
-            Thank you! Your email has been submitted.
+            <i
+              className="fa-solid fa-circle-check"
+              style={{
+                color: "#0daf36",
+                marginLeft: "-15px",
+                marginRight: "10px",
+              }}
+            ></i>
+            Email successfully submitted.
+            <br />
+            <br />
+            Thank you! Will reachout to you soon.
           </>
         );
         setEmail("");
       } else {
         setModalMessage(
-          "There was an error submitting your email. Please try again."
+          <>
+            <i
+              className="fa-solid fa-circle-xmark"
+              style={{
+                color: "#a82424",
+                marginRight: "10px",
+              }}
+            ></i>
+            There was an error submitting your email. Please try again.
+          </>
         );
       }
     } catch (error) {
@@ -66,13 +88,13 @@ const ContactSection = () => {
           <form className="inputWithButton" onSubmit={handleSubmit}>
             <input
               type="email"
-              placeholder="Your Email Address"
+              placeholder="     Enter Your Email Address"
               value={email}
               onChange={handleChange}
             />
             <button type="submit" disabled={isSubmitting}>
               {isSubmitting ? "Submitting..." : "Submit"}{" "}
-              {!isSubmitting && <span>&#10132;</span>}
+              {!isSubmitting && <span></span>}
             </button>
           </form>
         </div>
@@ -87,7 +109,7 @@ const ContactSection = () => {
             >
               ✕
             </button>
-            <div className="custom-modal-header">Aspireq</div>
+            <div className="custom-modal-header">ASPIREQ</div>
             <div className="custom-modal-message">{modalMessage}</div>
             <button
               className="custom-modal-button"
@@ -103,10 +125,3 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
-
-{
-  /* <i
-  className="fa-solid fa-circle-check"
-  style={{ color: "#0daf36", margin: 0 }}
-></i>; */
-}

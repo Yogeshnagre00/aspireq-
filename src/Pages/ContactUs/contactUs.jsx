@@ -56,7 +56,7 @@ const ContactForm = () => {
 
       if (response.ok) {
         setModalMessage(
-          "Thank you for reaching out to us, we will connect with you soon!"
+          "Thank you for contacting us, we will connect with you soon!"
         );
         setShowModal(true);
         setFormData({
@@ -86,11 +86,8 @@ const ContactForm = () => {
     <>
       <Navbar />
       <div className="contact-form-container">
-        <h1 className="contacth1">Contact Us</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Eleifend nec morbi tellus
-          vitae leo nunc.
-        </p>
+        <h1 className="contacth1">Contact us</h1>
+
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-row">
             <div className="form-group">
@@ -151,7 +148,7 @@ const ContactForm = () => {
               id="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Type here."
+              placeholder="Type Here."
               required
             />
           </div>

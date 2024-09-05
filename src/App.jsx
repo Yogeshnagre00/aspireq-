@@ -6,6 +6,9 @@ import NotFound from "./components/notFound";
 const BlogsCaseStudies = React.lazy(() =>
   import("./Pages/Blogs&CaseStudies/blogsCaseStudies")
 );
+const CookiesPolicy = React.lazy(() =>
+  import("./components/CookiesPolicy/cookiesPolicy")
+);
 const ContactForm = React.lazy(() => import("./Pages/ContactUs/contactUs"));
 const Home = React.lazy(() => import("./Pages/home"));
 
@@ -17,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contactUs" element={<ContactForm />} />
           <Route path="/BlogsCaseStudies" element={<BlogsCaseStudies />} />
+          <Route path="/CookiesPolicy" element={<CookiesPolicy />} />
           <Route path="*" element={<NotFound />} />{" "}
           {/* Fallback route for undefined paths */}
         </Routes>
