@@ -16,7 +16,7 @@ const CookiesPolicy = () => {
         onClick={handleBackToHome}
         className="back-to-home-button top-button"
       >
-        Back to Home
+        Back
       </button>
 
       <h1>Cookies Policy</h1>
