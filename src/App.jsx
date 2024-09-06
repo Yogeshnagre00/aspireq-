@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contactUs" element={<ContactForm />} />
-          <Route path="/BlogsCaseStudies" element={<BlogsCaseStudies />} />
+          <Route path="/blogsCaseStudies" element={<BlogsCaseStudies />} />
           <Route path="/cookiespolicy" element={<CookiesPolicy />} />
           <Route path="*" element={<NotFound />} />{" "}
           {/* Fallback route for undefined paths */}
