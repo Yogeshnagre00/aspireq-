@@ -1,24 +1,8 @@
-import { useNavigate } from "react-router-dom";
-
 import "./cookiesPolicy.css";
 
 const CookiesPolicy = () => {
-  const navigate = useNavigate();
-
-  // Function to navigate back to the homepage
-  const handleBackToHome = () => {
-    navigate("/");
-  };
-
   return (
     <div className="cookies-policy-container">
-      <button
-        onClick={handleBackToHome}
-        className="back-to-home-button top-button"
-      >
-        Back
-      </button>
-
       <h1>Cookies Policy</h1>
 
       <section className="content">
@@ -30,10 +14,10 @@ const CookiesPolicy = () => {
           preferences), understand usage patterns, provide, improve, and secure
           the Aspireq Sites.
         </p>
-        <h3>
+        <h4>
           aspireq Sites use different types of Cookies for different reasons, as
           follows:
-        </h3>
+        </h4>
         <h3>Absolutely Necessary Cookies</h3>
         <p>
           These Cookies are essential to enable you to move around Aspireq Sites

@@ -45,7 +45,7 @@ const ContactSection = () => {
             Email successfully submitted.
             <br />
             <br />
-            Thank you! Will reachout to you soon.
+            <span>&nbsp;</span> Thank you! Will reachout to you soon.
           </>
         );
         setEmail("");
@@ -107,7 +107,7 @@ const ContactSection = () => {
             >
               ✕
             </button>
-            <div className="custom-modal-header">ASPIREQ</div>
+            <div className="custom-modal-header">&nbsp; ASPIREQ</div>
             <div className="custom-modal-message">{modalMessage}</div>
             <button
               className="custom-modal-button"
