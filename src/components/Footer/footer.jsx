@@ -27,7 +27,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/CookiesPolicy"
+                  href="/cookiespolicy"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

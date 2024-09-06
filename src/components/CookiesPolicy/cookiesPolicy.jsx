@@ -1,6 +1,6 @@
 import "./cookiesPolicy.css";
 
- const CookiesPolicy = () => {
+const cookiespolicy = () => {
   return (
     <div className="cookies-policy-container">
       <h1>Cookies Policy</h1>
@@ -78,4 +78,4 @@ import "./cookiesPolicy.css";
   );
 };
 
- export default CookiesPolicy;
+export default cookiespolicy;
