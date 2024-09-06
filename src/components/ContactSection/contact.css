@@ -35,18 +35,20 @@ h1 {
   display: flex;
   background-color: #fff;
   border-radius: 50px;
+  width: 430px;
+  margin-left: 10%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 5px;
+  padding: 3px;
 }
 
 .inputWithButton input {
   font-family: "Montserrat";
-  margin-left: 10%;
+  margin-left: 5%;
   flex: 1;
   padding: 10px;
   border: none;
   border-radius: 50px 0 0 50px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   outline: none;
   color: #000000;
   background: none;
@@ -60,8 +62,8 @@ h1 {
   background: linear-gradient(135deg, #1e90ff 0%, #007bff 100%);
   color: white;
   border: none;
-  padding: 10px 20px;
-  font-size: 1.2rem;
+  padding: 8px 20px;
+  font-size: 1rem;
   border-radius: 50px;
   cursor: pointer;
   display: flex;
