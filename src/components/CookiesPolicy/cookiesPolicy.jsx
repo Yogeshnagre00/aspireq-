@@ -30,7 +30,10 @@ const CookiesPolicy = () => {
           preferences), understand usage patterns, provide, improve, and secure
           the Aspireq Sites.
         </p>
-        <h2>Types of Cookies We Use</h2>
+        <h3>
+          aspireq Sites use different types of Cookies for different reasons, as
+          follows:
+        </h3>
         <h3>Absolutely Necessary Cookies</h3>
         <p>
           These Cookies are essential to enable you to move around Aspireq Sites
@@ -39,7 +42,7 @@ const CookiesPolicy = () => {
         </p>
         <h3>Performance Cookies</h3>
         <p>
-          These Cookies collect information about how you use Aspireq Sites.
+          These Cookies collect information about how you use aspireq Sites.
           Information collected includes, for example, browsers and operating
           systems used, domain name of the website previously visited, number of
           visits, average duration of visit, and pages viewed. These Cookies do
@@ -51,13 +54,40 @@ const CookiesPolicy = () => {
         <p>
           These Cookies allow the website to remember choices you make (such as
           your username or ID, language preference, or the area or region you
-          are in) and provide enhanced, more personal features.
+          are in) and provide enhanced, more personal features. These Cookies
+          can also be used to remember changes you have made to text size,
+          fonts, and other customizable parts of web pages. They may also be
+          used to provide services you have asked for, such as watching a video
+          or commenting on a blog. The information these Cookies collect may be
+          anonymized, and they cannot track your browsing activity on other
+          websites.
         </p>
         <h3>Third-Party Cookies</h3>
         <p>
-          Aspireq may also allow third-party service performance and retargeting
-          Cookies, such as Google Analytics, Facebook Pixel, etc., to collect
-          information about your online activities.
+          aspireq may also allow third party service performance and retargeting
+          Cookies, such as the Google Analytics, Google reCAPTCHA, Yandex
+          Metrica, LinkedIn Insight Tag, Google AdWords, Facebook Pixel,
+          Amplitude, Hotjar, Visitor Queue, Marketo Munchkin, etc., to collect
+          information about your online activities on the aspireq Sites and
+          across unaffiliated websites you may visit. This information is used
+          to provide ads tailored to your interests (behavioral advertising),
+          and to collect information to help track and manage the effectiveness
+          of the ads and number of visitors. This means aspireq may show ads
+          based on your past visits to aspireq Sites, through publishing
+          networks, such as the Google Content Network (GCN). More information
+          about these Cookies may be available on the relevant third party’s
+          website.
+        </p>
+        <h3>Your Choices Regarding Cookies</h3>
+        <p>
+          If you do not agree to certain uses of Cookies detailed above, you can
+          exercise certain choices through your browser settings or by not using
+          the aspireq Sites. If you choose to reject cookies via your browser
+          settings, you may still use aspireq Sites though your access to some
+          functionality and areas may be restricted. As the means by which you
+          can refuse cookies through your web browser controls vary from
+          browser-to-browser, you should visit your browser’s help menu for more
+          information.
         </p>
       </section>
     </div>
