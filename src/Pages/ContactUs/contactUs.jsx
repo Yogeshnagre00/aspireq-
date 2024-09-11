@@ -27,6 +27,17 @@ const ContactForm = () => {
     });
   };
 
+  // Function to check if all required fields are filled
+  const isFormValid = () => {
+    return (
+      formData.firstName.trim() !== "" &&
+      formData.lastName.trim() !== "" &&
+      formData.email.trim() !== "" &&
+      formData.mobile.trim() !== "" &&
+      formData.message.trim() !== ""
+    );
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -160,7 +171,15 @@ const ContactForm = () => {
               required
             />
           </div>
-          <button type="submit" className="submit-btn" disabled={isSubmitting}>
+          <button
+            type="submit"
+            className="submit-btn"
+            disabled={!isFormValid() || isSubmitting}
+            style={{
+              backgroundColor: isFormValid() ? "#007bff" : "silver",
+              cursor: isFormValid() ? "pointer" : "not-allowed",
+            }}
+          >
             {isSubmitting ? "Submitting..." : "Submit"}
           </button>
         </form>
