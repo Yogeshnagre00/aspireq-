@@ -17,8 +17,6 @@ const ContactForm = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // Add state for modal message and visibility
   const [modalMessage, setModalMessage] = useState("");
   const [showModal, setShowModal] = useState(false);
 
@@ -91,7 +89,9 @@ const ContactForm = () => {
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="firstName">First Name</label>
+              <label htmlFor="firstName">
+                First Name <span style={{ color: "red" }}>&#x2A;</span>
+              </label>
               <input
                 type="text"
                 name="firstName"
@@ -103,7 +103,9 @@ const ContactForm = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="lastName">Last Name</label>
+              <label htmlFor="lastName">
+                Last Name <span style={{ color: "red" }}>&#x2A;</span>
+              </label>
               <input
                 type="text"
                 name="lastName"
@@ -117,7 +119,9 @@ const ContactForm = () => {
           </div>
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="email">Email ID</label>
+              <label htmlFor="email">
+                Email ID <span style={{ color: "red" }}>&#x2A;</span>
+              </label>
               <input
                 type="email"
                 name="email"
@@ -129,7 +133,9 @@ const ContactForm = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="mobile">Mobile Number</label>
+              <label htmlFor="mobile">
+                Mobile Number <span style={{ color: "red" }}>&#x2A;</span>
+              </label>
               <input
                 type="text"
                 name="mobile"
@@ -142,7 +148,9 @@ const ContactForm = () => {
             </div>
           </div>
           <div className="form-group">
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">
+              Message <span style={{ color: "red" }}>&#x2A;</span>
+            </label>
             <textarea
               name="message"
               id="message"
@@ -158,7 +166,6 @@ const ContactForm = () => {
         </form>
       </div>
 
-      {/* Modal for displaying messages */}
       {showModal && (
         <div className="custom-modal-overlay">
           <div className="custom-modal-content">

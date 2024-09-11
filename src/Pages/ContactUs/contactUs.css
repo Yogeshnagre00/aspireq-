@@ -20,19 +20,19 @@
   flex-direction: column;
   gap: 40px;
   max-width: 100%;
+  height: 550px;
   margin: 0 auto;
   padding: 40px;
   text-align: center;
   border: 0.5px solid #ddd7d7;
   border-radius: 10px;
-  background-color: none;
   box-shadow: 0 4px 8px rgba(31, 25, 25, 0.436);
 }
 
 /* Form Row Styling */
 .form-row {
   display: flex;
-  gap: 15px;
+  gap: 30px;
 }
 
 /* Form Group Styling */
@@ -58,13 +58,14 @@ textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #9c9a9a;
+  background-color: #eef4ff;
   border-radius: 10px;
   font-size: 1rem;
   outline: none;
 }
 
 textarea {
-  height: 100px;
+  height: 150px;
   resize: none;
 }
 

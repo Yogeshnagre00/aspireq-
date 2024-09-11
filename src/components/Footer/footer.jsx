@@ -20,7 +20,13 @@ export const Footer = () => {
             <h4 className="footer-heading">Company</h4>
             <ul className="footer-links">
               <li>
-                <a href="#">Privacy Policy</a>
+                <a
+                  href="/privacypolicy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Privacy Policy
+                </a>
               </li>
               <li>
                 <a href="#">Terms of Service</a>
@@ -71,20 +77,31 @@ export const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-social">
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin-in"></i>
+              <i
+                className="fa-brands fa-linkedin"
+                style={{ color: "#1159d4" }}
+              ></i>
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i>
+              <i
+                className="fa-brands fa-twitter"
+                style={{ color: "#0d61f2" }}
+              ></i>
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-facebook-f"></i>
+              <i
+                className="fa-brands fa-facebook"
+                style={{ color: "#0561ff" }}
+              ></i>
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-youtube"></i>
+              <i
+                className="fa-brands fa-youtube"
+                style={{ color: "#da1010" }}
+              ></i>
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              {/* <i className="fab fa-instagram"></i> */}
-              <i className="fa-brands fa-square-instagram"></i>
+              <i className="fab fa-instagram"></i>
             </a>
             <p className="footer-copyright">
               Copyright © 2024 aspireq. All rights reserved.
@@ -95,3 +112,7 @@ export const Footer = () => {
     </footer>
   );
 };
+
+{
+  /* <img src="./Images/instagram.png" /> */
+}
