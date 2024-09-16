@@ -1,5 +1,5 @@
 .faq-section {
-  max-width: 600px;
+  max-width: 780px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -42,7 +42,6 @@
   color: #666;
   line-height: 1.5;
   padding-left: 15px;
-  border-left: 2px solid #007bff;
 }
 
 .faq-item.active .faq-question {

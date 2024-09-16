@@ -65,7 +65,17 @@ const ContactForm = () => {
 
       if (response.ok) {
         setModalMessage(
-          "Thank you for contacting us, we will connect with you soon!"
+          <>
+            <i
+              className="fa-solid fa-circle-check"
+              style={{
+                color: "#0daf36",
+                marginLeft: "-15px",
+                marginRight: "10px",
+              }}
+            ></i>
+            Thank you for contacting us, we will connect with you soon!
+          </>
         );
         setShowModal(true);
         setFormData({
@@ -148,13 +158,22 @@ const ContactForm = () => {
                 Mobile Number <span style={{ color: "red" }}>&#x2A;</span>
               </label>
               <input
-                type="text"
+                type="tel"
                 name="mobile"
                 id="mobile"
                 value={formData.mobile}
                 onChange={handleChange}
                 placeholder="Mobile Number"
+                pattern="[0-9]*"
                 required
+                onInvalid={(e) => {
+                  if (!e.target.validity.valid) {
+                    e.target.setCustomValidity(
+                      "Only numbers are allowed "
+                    );
+                  }
+                }}
+                onInput={(e) => e.target.setCustomValidity("")}
               />
             </div>
           </div>
