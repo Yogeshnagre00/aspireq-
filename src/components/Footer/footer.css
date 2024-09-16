@@ -22,11 +22,7 @@
 .container {
   width: 93%;
   margin: 0 auto;
-  /* padding: 0 2.5rem; */
 }
-/* p {
-  margin-bottom: 0 !important;
-} */
 
 .row {
   display: flex;
@@ -50,7 +46,6 @@
 .footer-text {
   width: 30%;
   margin-top: 30px;
-  /* font-family: "Poppins", sans-serif; */
 }
 
 /* Footer Heading styles */
@@ -86,13 +81,14 @@
 
 /* Adjusted text alignment for social media icons */
 .footer-bottom {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  /* padding: 10px 0; */
 }
-.footer-social {
-  text-align: end;
-  margin-top: 10px;
-}
+/* .footer-social {
+  
+} */
 
 .footer-social a {
   display: inline-block;
@@ -113,7 +109,8 @@
 
 .footer-copyright {
   text-align: start;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  padding-top: 20px;
 }
 .fa-instagram {
   color: transparent;
@@ -165,15 +162,15 @@
 
 @media (max-width: 480px) {
   .footer {
-    padding: 15px; /* Further reduce padding for extra small screens */
+    padding: 15px; 
   }
 
   .col-md-3 {
-    padding: 0 5px; /* Further reduce padding */
-    flex: 1 1 100%; /* Ensure full-width on extra small screens */
+    padding: 0 5px; 
+    flex: 1 1 100%; 
   }
 
   .footer-bottom {
-    flex-direction: row; /* Keep footer items in one row */
+    flex-direction: row; 
   }
 }

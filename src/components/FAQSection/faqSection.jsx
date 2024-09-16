@@ -30,7 +30,7 @@ const FAQSection = () => {
         "We sign a non-disclosure agreement (NDA) for protection of non-public information about the customers that is used in the project before receiving the system info or cost estimation.",
     },
     {
-      question: "Do you sign an NDA?",
+      question: "How soon can you start?",
       answer: "We can often start within days of receiving your request.",
     },
   ];

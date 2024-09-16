@@ -22,12 +22,11 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/contactUs" element={<ContactForm />} />
+          <Route path="/contactus" element={<ContactForm />} />
           <Route path="/blogscasestudies" element={<BlogsCaseStudies />} />
           <Route path="/cookiespolicy" element={<CookiesPolicy />} />
           <Route path="privacypolicy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />{" "}
-          {/* Fallback route for undefined paths */}
         </Routes>
       </Suspense>
     </Router>

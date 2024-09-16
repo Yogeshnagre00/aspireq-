@@ -75,6 +75,9 @@ export const Footer = () => {
         <hr className="footer-separator" />
 
         <div className="footer-bottom">
+          <p className="footer-copyright">
+            Copyright © 2024 aspireq. All rights reserved.
+          </p>
           <div className="footer-social">
             <a href="#" target="_blank" rel="noopener noreferrer">
               <i
@@ -103,9 +106,6 @@ export const Footer = () => {
             <a href="#" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram"></i>
             </a>
-            <p className="footer-copyright">
-              Copyright © 2024 aspireq. All rights reserved.
-            </p>
           </div>
         </div>
       </div>

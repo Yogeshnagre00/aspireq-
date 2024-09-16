@@ -11,7 +11,7 @@ export const BlogCard = ({
   author,
   authorImage,
   date,
-  onClick, // Add onClick prop
+  onClick, 
 }) => (
   <div className="card" onClick={() => onClick(id)}>
     <img src={imageSrc} alt={title} />
