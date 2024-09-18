@@ -11,7 +11,7 @@ export const BlogCard = ({
   author,
   authorImage,
   date,
-  onClick, 
+  onClick,
 }) => (
   <div className="card" onClick={() => onClick(id)}>
     <img src={imageSrc} alt={title} />
@@ -45,7 +45,7 @@ BlogCard.propTypes = {
   author: PropTypes.string.isRequired,
   authorImage: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired, // Ensure onClick is required
+  onClick: PropTypes.func.isRequired, 
 };
 
 // CaseStudyCard.js

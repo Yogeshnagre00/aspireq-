@@ -17,7 +17,7 @@ const FAQSection = () => {
     {
       question: "Do you require long-term contracts?",
       answer:
-        "Nope! Our software team will work as per your requirement.. You will have total flexibility.",
+        "Nope! Our software team will work as per your requirement. You will have total flexibility.",
     },
     {
       question: "What type of clients have you worked for?",

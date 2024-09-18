@@ -1,37 +1,28 @@
 import { useParams } from "react-router-dom";
 
-export const BlogDetail = () => {
+export const BlogDetails = () => {
   const { id } = useParams();
-  const blog = blogData.find((b) => b.id === id); // Fetch blog by ID
 
-  if (!blog) return <p>Blog not found</p>;
-
+  // Here you can fetch blog data based on id if necessary
   return (
-    <div className="blog-detail">
-      <h1>{blog.title}</h1>
-      <img src={blog.imageSrc} alt={blog.title} />
-      <p>{blog.description}</p>
-      <div className="author-info">
-        <img src={blog.authorImage} alt={blog.author} />
-        <span>{blog.author}</span>
-      </div>
-      <p>{blog.date}</p>
+    <div>
+      <h1>Blog Details for Blog ID: {id}</h1>
+      <p>Here you can show more detailed information about the blog post.</p>
     </div>
   );
 };
 
-export const CaseStudyDetail = () => {
-  const { id } = useParams();
-  const caseStudy = caseStudyData.find((c) => c.id === id); // Fetch case study by ID
+export const CaseStudyDetails = () => {
+  const { id } = useParams(
+    
+  );
+ 
 
-  if (!caseStudy) return <p>Case Study not found</p>;
-
+  // Fetch case study data based on id if necessary
   return (
-    <div className="case-study-detail">
-      <h1>{caseStudy.title}</h1>
-      <img src={caseStudy.imageSrc} alt={caseStudy.title} />
-      <p>{caseStudy.description}</p>
-      <p>{caseStudy.date}</p>
+    <div>
+      <h1>Case Study Details for Case Study ID: {id}</h1>
+      <p>Here you can show more detailed information about the case study.</p>
     </div>
   );
 };
