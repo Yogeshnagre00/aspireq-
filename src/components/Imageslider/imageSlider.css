@@ -54,7 +54,8 @@
 
 /* Customize Dots */
 .slick-dots li button:before {
-  font-size: 18px;
+  margin-top: 9px;
+  font-size: 12px;
   color: var(--primary-color);
 }
 

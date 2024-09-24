@@ -24,7 +24,7 @@ const Navbar = () => {
           </li>
           {/* Dropdown for SERVICES */}
           <li className="dropdown">
-            <Link to="/">SERVICES</Link>
+            <Link to="/Healthcare">SERVICES</Link>
           </li>
           <li>
             <Link to="/blogscasestudies">BLOGS & CASE STUDIES</Link>
