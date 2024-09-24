@@ -2,7 +2,6 @@ import React, { Suspense } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import NotFound from "./components/notFound";
-import { Healthcare } from "./Pages/Services/services";
 
 const BlogsCaseStudies = React.lazy(() =>
   import("./Pages/Blogs&CaseStudies/blogsCaseStudies")
@@ -23,7 +22,6 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/healthcare" element={<Healthcare />} />
           <Route path="/blogscasestudies" element={<BlogsCaseStudies />} />
           <Route path="/contactus" element={<ContactForm />} />
           <Route path="/cookiespolicy" element={<CookiesPolicy />} />
