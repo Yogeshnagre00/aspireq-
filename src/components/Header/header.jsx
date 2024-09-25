@@ -22,9 +22,10 @@ const Navbar = () => {
           <li>
             <Link to="/">HOME</Link>
           </li>
-          {/* Dropdown for SERVICES */}
-          <li className="dropdown">
-            <Link to="/Healthcare">SERVICES</Link>
+          <li>
+            <a href="/services" target="_blank" rel="noopener noreferrer">
+              SERVICES
+            </a>
           </li>
           <li>
             <Link to="/blogscasestudies">BLOGS & CASE STUDIES</Link>
