@@ -1,4 +1,5 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Link } from "react-router-dom";
 
 import "./footer.css";
 
@@ -46,19 +47,19 @@ export const Footer = () => {
             <h4 className="footer-heading">Industries</h4>
             <ul className="footer-links">
               <li>
-                <a href="#">Healthcare</a>
+                <Link to="/services#healthcare">Healthcare</Link>
               </li>
               <li>
-                <a href="#">Finance</a>
+                <Link to="/services#finance">Finance</Link>
               </li>
               <li>
-                <a href="#">Banking</a>
+                <Link to="/services#banking">Banking</Link>
               </li>
               <li>
-                <a href="#">Insurance</a>
+                <Link to="/services#insurance">Insurance</Link>
               </li>
               <li>
-                <a href="#">E-commerce</a>
+                <Link to="/services#ecommerce">E-commerce</Link>
               </li>
             </ul>
           </div>
