@@ -1,5 +1,5 @@
 import { Element, Link } from "react-scroll";
-import "./Services.css"; // Import your CSS file for styling
+import "./services.css";
 
 const Services = () => {
   return (
