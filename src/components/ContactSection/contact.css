@@ -1,5 +1,5 @@
 .contact-section {
-  padding: 40px 30px;
+  /* padding: 40px 30px; */
   display: flex;
   max-width: 60%;
   margin: 0 auto 5%;
@@ -22,8 +22,7 @@
   padding: 0 20px;
 }
 
-h1 {
-  font-family: "Montserrat", sans-serif;
+.contact-container h1 {
   font-size: 25px;
   font-weight: bold;
   color: #fff;

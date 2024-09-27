@@ -2,13 +2,3 @@ body {
   font-family: "Montserrat", sans-serif;
   font-display: swap;
 }
-
-p {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 30px;
-}
-
-html {
-  scroll-behavior: smooth;
-}

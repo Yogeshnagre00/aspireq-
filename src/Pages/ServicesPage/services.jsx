@@ -4,7 +4,7 @@ import "./services.css";
 const Services = () => {
   return (
     <div>
-      <header>
+      <header className="services-header">
         <h1>Our Services</h1>
         <nav>
           <ul>
@@ -39,7 +39,7 @@ const Services = () => {
 
       <main className="services-container">
         <Element name="healthcare">
-          <section>
+          <section className="service-section">
             <h1>Healthcare</h1>
             <p>
               In today’s rapidly evolving healthcare landscape, leveraging
@@ -131,7 +131,7 @@ const Services = () => {
         </Element>
 
         <Element name="finance">
-          <section>
+          <section className="service-section">
             <h1>Fintech</h1>
             <p>
               Fintech, short for financial technology, refers to the integration

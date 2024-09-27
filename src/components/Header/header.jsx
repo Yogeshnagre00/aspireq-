@@ -22,11 +22,11 @@ const Navbar = () => {
           <li>
             <Link to="/">HOME</Link>
           </li>
+
           <li>
-            <a href="/services" target="_blank" rel="noopener noreferrer">
-              SERVICES
-            </a>
+            <Link to="/services"> SERVICES</Link>
           </li>
+
           <li>
             <Link to="/blogscasestudies">BLOGS & CASE STUDIES</Link>
           </li>
