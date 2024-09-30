@@ -1,8 +1,17 @@
-// import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { Element, Link } from "react-scroll";
 import "./services.css";
 
 const Services = () => {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.getElementById(hash.substring(1)); // Remove the '#'
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
   // const navigate = useNavigate();
   return (
     <div>
@@ -14,12 +23,12 @@ const Services = () => {
         <nav>
           <ul>
             <li>
-              <Link to="healthcare" smooth={true} duration={300}>
+              <Link to="healthcare" smooth={true} duration={400}>
                 Healthcare
               </Link>
             </li>
             <li>
-              <Link to="finance" smooth={true} duration={300}>
+              <Link to="finance" smooth={true} duration={400}>
                 Finance
               </Link>
             </li>
@@ -44,7 +53,7 @@ const Services = () => {
 
       <main className="services-container">
         <Element name="healthcare">
-          <section className="service-section">
+          <section className="service-section" id="healthcare">
             <h1>Healthcare</h1>
             <p>
               In today’s rapidly evolving healthcare landscape, leveraging
@@ -136,7 +145,7 @@ const Services = () => {
         </Element>
 
         <Element name="finance">
-          <section className="service-section">
+          <section className="service-section" id="finance">
             <h1>Fintech</h1>
             <p>
               Fintech, short for financial technology, refers to the integration
@@ -192,7 +201,7 @@ const Services = () => {
           </section>
         </Element>
         <Element name="banking">
-          <section className="service-section">
+          <section className="service-section" id="banking">
             <h1>Banking</h1>
             <p>
               Banks are financial institutions that accept deposits from the
@@ -305,7 +314,7 @@ const Services = () => {
           </section>
         </Element>
         <Element name="insurance">
-          <section className="service-section">
+          <section className="service-section" id="insurance">
             <h1>Insurance</h1>
             <p>
               Insurance is a vital financial product that offers protection
@@ -428,7 +437,7 @@ const Services = () => {
         </Element>
 
         <Element name="ecommerce">
-          <section className="service-section">
+          <section className="service-section" id="ecommerce">
             <h1>E-commerce</h1>
             <p>
               E-commerce, or electronic commerce, encompasses the buying and
@@ -516,8 +525,6 @@ const Services = () => {
             </p>
           </section>
         </Element>
-
-        {/* Add more sections for Banking, Insurance, and E-commerce as needed */}
       </main>
     </div>
   );
