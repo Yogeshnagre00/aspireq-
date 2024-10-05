@@ -18,7 +18,7 @@ header {
   background-color: var(--header-bg-color);
   box-shadow: var(--header-box-shadow);
   padding: 13px 0;
-  margin: -10px;
+  /* margin: -10px; */
   position: fixed;
   top: 0;
   width: 100%;
@@ -71,9 +71,9 @@ header {
 }
 
 /* Hidden Class to Maintain Layout */
-.hidden {
-  visibility: hidden; /* Keeps the element in the flow and preserves its layout space */
-}
+/* .hidden {
+  visibility: hidden; 
+} */
 
 /* Responsive styles */
 @media (max-width: 768px) {

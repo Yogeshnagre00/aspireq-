@@ -6,19 +6,15 @@ const Services = () => {
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
-      const element = document.getElementById(hash.substring(1)); // Remove the '#'
+      const element = document.getElementById(hash.substring(1)); 
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, []);
-  // const navigate = useNavigate();
   return (
     <div>
       <header className="services-header">
-        {/* <button onClick={() => navigate(-1)} className="back-button">
-          Back
-        </button> */}
         <h1>Our Services</h1>
         <nav>
           <ul>

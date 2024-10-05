@@ -18,6 +18,8 @@
 
 .slider-item {
   transition: transform 0.3s ease, filter 0.3s ease;
+  overflow: hidden;
+  border-radius: var(--border-radius-large);
 }
 
 .image-slider img {
@@ -26,9 +28,9 @@
   max-width: var(--max-image-width);
   margin: 0 auto;
   display: block;
-  border-radius: var(--border-radius-large);
   object-fit: cover;
   object-position: center;
+  transition: border-radius 0.3s ease;
 }
 
 .slick-slide {
@@ -37,6 +39,7 @@
 
 .slick-center img {
   transform: scale(1.2);
+  border-radius: var(--border-radius-large);
   filter: blur(0);
 }
 
@@ -44,10 +47,18 @@
   filter: blur(5px);
   transform: scale(0.8);
 }
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .image-slider img {
+    border-radius: 15px;
+  }
+
+  .slick-center img {
     border-radius: 15px;
   }
 }
