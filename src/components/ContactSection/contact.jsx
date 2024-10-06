@@ -86,7 +86,7 @@ const ContactSection = () => {
           <form className="inputWithButton" onSubmit={handleSubmit}>
             <input
               type="email"
-              placeholder="     Enter Your Email Address"
+              placeholder="Enter Your Email Address"
               value={email}
               onChange={handleChange}
             />

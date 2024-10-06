@@ -45,6 +45,7 @@
   margin-left: 5%;
   flex: 1;
   padding: 10px;
+  padding-left: 5%;
   border: none;
   border-radius: 50px 0 0 50px;
   font-size: 0.9rem;
@@ -61,9 +62,10 @@
   background: linear-gradient(135deg, #1e90ff 0%, #007bff 100%);
   color: white;
   border: none;
-  padding: 7px 15px;
-  font-size: 1rem;
-  border-radius: 50px;
+  margin: 1px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  border-radius: 40px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -73,10 +75,6 @@
 .inputWithButton button:hover {
   background: linear-gradient(135deg, #007bff 0%, #1e90ff 100%);
 }
-
-/* .inputWithButton button span {
-  margin-left: 10px;
-} */
 
 @media (max-width: 600px) {
   .inputWithButton {
