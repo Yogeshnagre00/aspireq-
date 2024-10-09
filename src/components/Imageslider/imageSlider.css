@@ -2,7 +2,6 @@
 :root {
   --primary-color: #1b7ce3;
   --active-dot-color: #1e90ff;
-  --border-radius-large: 30px;
   --max-image-width: 1300px;
 }
 
@@ -13,23 +12,24 @@
   padding: 15px 0 40px;
   text-align: center;
   overflow: hidden;
- 
+ outline: none;
 }
 
 .slider-item {
   transition: transform 0.3s ease, filter 0.3s ease;
   overflow: hidden;
-  border-radius: var(--border-radius-large); 
+  border-radius: 30px;
+  outline:none;
+  
 }
 
 .image-slider img {
-  width: 80%; 
+  width: 78%; 
  height: 350px;
   margin: 0 auto;
   display: block;
   object-fit: contain; 
   object-position: center;
-  border-radius: var(--border-radius-large); 
 
 }
 
