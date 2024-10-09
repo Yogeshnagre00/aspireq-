@@ -12,8 +12,8 @@ const ImageSlider = () => {
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: "24%",
-    autoplay: true,
-    autoplaySpeed: 5000,
+    //autoplay: true,
+    // autoplaySpeed: 5000,
   };
 
   const images = [
