@@ -60,21 +60,72 @@ const Services = () => {
             </p>
             <h3>Our Services Include:</h3>
             <ul>
+            <div className="section ehr-section">
+        <div className="content-container">
+          <div className="left-content">
+            <ul>
               <li>
-                <strong>Electronic Health Records (EHR) Systems:</strong> Our
-                EHR solutions ensure seamless access to patient records,
-                improving the efficiency and accuracy of patient care. With
-                robust data security measures, our systems comply with all
-                regulatory standards, safeguarding sensitive patient
-                information.
-              </li>{" "}
-              <br />
+                <strong>Electronic Health Records (EHR) Systems:</strong> Our EHR
+                solutions ensure seamless access to patient records, improving the
+                efficiency and accuracy of patient care. With robust data security
+                measures, our systems comply with all regulatory standards,
+                safeguarding sensitive patient information.
+              </li>
+            </ul>
+          </div>
+          <div className="right-image">
+            <img src="./Images/5.jpg" alt="EHR Solutions" className="service-image" />
+          </div>
+        </div>
+      </div>
+      <br />
+      {/* Telemedicine Section */}
+      <div className="section telemedicine-section">
+        <div className="content-container  reverse">
+          <div className="left-content">
+            <ul>
               <li>
                 <strong>Telemedicine Solutions:</strong> We offer cutting-edge
                 telemedicine platforms that facilitate remote consultations,
                 diagnostics, and patient monitoring. These solutions enhance
                 accessibility to healthcare services, especially for patients in
                 remote areas, and reduce the need for in-person visits.
+              </li>
+            </ul>
+          </div>
+          <div className="right-image">
+            <img src="./Images/4.jpg" alt="Telemedicine Solutions" className="service-image" />
+          </div>
+        </div>
+      </div>
+
+<br />
+      {/* Remote Patient Monitoring Section */}
+      <div className="section remote-monitoring-section">
+        <div className="content-container">
+          <div className="left-content">
+            <ul>
+              <li>
+                <strong>Remote Patient Monitoring:</strong> Our remote patient
+                monitoring systems allow continuous tracking of patients’ health
+                conditions. These solutions are designed to provide timely
+                interventions and improve patient outcomes by closely monitoring
+                vital signs and other health metrics.
+              </li>
+            </ul>
+          </div>
+          <div className="right-image">
+            <img src="./Images/3.jpg" alt="Remote Patient Monitoring" className="service-image" />
+          </div>
+        </div>
+      </div>
+      <br />
+              <li>
+                <strong>Security and Compliance:</strong> We prioritize the
+                security and privacy of patient data. Our software solutions are
+                built with robust security measures and comply with all
+                healthcare regulations, ensuring that patient information is
+                protected at all times.
               </li>{" "}
               <br />
               <li>
@@ -91,22 +142,6 @@ const Services = () => {
                 data. By improving data management and analysis, we enable
                 better decision-making, enhanced reporting capabilities, and a
                 comprehensive approach to patient care.
-              </li>{" "}
-              <br />
-              <li>
-                <strong>Remote Patient Monitoring:</strong> Our remote patient
-                monitoring systems allow continuous tracking of patients’ health
-                conditions. These solutions are designed to provide timely
-                interventions and improve patient outcomes by closely monitoring
-                vital signs and other health metrics.
-              </li>{" "}
-              <br />
-              <li>
-                <strong>Security and Compliance:</strong> We prioritize the
-                security and privacy of patient data. Our software solutions are
-                built with robust security measures and comply with all
-                healthcare regulations, ensuring that patient information is
-                protected at all times.
               </li>{" "}
               <br />
             </ul>{" "}
