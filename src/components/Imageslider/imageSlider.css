@@ -54,6 +54,16 @@
   right: 25px;
   z-index: 1;
 }
+/* Customize Dots */
+.slick-dots li button:before {
+  margin-top: 12px;
+  font-size: 10px;
+  color: var(--primary-color);
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--active-dot-color);
+}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -66,6 +76,7 @@
   .slider-item {
     border-radius: 20px;
   }
+  
 }
 
 @media (max-width: 768px) {
@@ -73,18 +84,18 @@
   .image-slider img {
     width: 90%; 
     height: 250px;
-    border-radius: 15px; /* Smaller border radius for mobile */
+    border-radius: 15px; 
   }
 
   /* Reduce the center mode padding on smaller screens */
   .slick-center img {
     border-radius: 15px;
-    transform: scale(1.2); /* Slightly smaller scaling */
+    transform: scale(1.2); 
   }
   
   .slick-slide:not(.slick-center) img {
     filter: blur(4px);
-    transform: scale(0.9); /* Smaller scale difference for mobile */
+    transform: scale(0.9); 
   }
   
   /* Adjust padding and navigation button size */
@@ -95,6 +106,10 @@
   .slick-prev, .slick-next {
     top: 50%;
     font-size: 12px; /* Make navigation arrows smaller on mobile */
+  }
+  .slick-dots li button:before {
+    margin-top: 10px; 
+    font-size: 9px; 
   }
 }
 
@@ -112,15 +127,10 @@
   .image-slider {
     padding: 8px 0 20px;
   }
+  .slick-dots li button:before {
+    margin-top: 8px; 
+    font-size: 8px; 
+  }
 }
 
-/* Customize Dots */
-.slick-dots li button:before {
-  margin-top: 9px;
-  font-size: 11px;
-  color: var(--primary-color);
-}
 
-.slick-dots li.slick-active button:before {
-  color: var(--active-dot-color);
-}
