@@ -77,16 +77,15 @@ header {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
+  /* .navbar {
     align-items: flex-start;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
-    width: 100%;
+    width: 30%;
     gap: 0;
   }
 
@@ -97,12 +96,12 @@ header {
   .nav-links a {
     padding: 10px 20px;
     font-size: 18px;
-    width: 100%;
+    width: 50%;
     text-align: center;
   }
 
   .btn {
-    width: 100%;
+    width: 30%;
     text-align: center;
     padding: 10px 0;
     margin-top: 10px;
@@ -110,15 +109,21 @@ header {
 
   .logo img {
     margin-right: 0;
+  } */
+  header {
+    display: none; /* Hide the header */
   }
 }
 
 @media (max-width: 480px) {
-  .nav-links a {
+  /* .nav-links a {
     font-size: 16px;
   }
 
   .btn {
     padding: 10px 20px;
+  } */
+  header {
+    display: none; /* Hide the header */
   }
 }
