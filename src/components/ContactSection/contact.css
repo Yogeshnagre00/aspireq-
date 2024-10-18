@@ -79,12 +79,12 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
   .contact-section {
-    max-width: 90%; /* Increase max-width for mobile */
-    height: auto; /* Adjust height to accommodate content */
+    max-width: 85%; 
+    height: auto; 
   }
 
   .contact-container h1 {
-    font-size: 20px; /* Adjust font size for mobile */
+    font-size: 20px; 
   }
 
   .inputWithButton {
@@ -94,24 +94,24 @@
   }
 
   .inputWithButton input {
-    font-size: 0.8rem; /* Adjust font size for mobile */
+    font-size: 0.8rem; 
   }
 
   .inputWithButton button {
-    font-size: 0.8rem; /* Adjust font size for mobile */
+    font-size: 0.8rem; 
   }
 }
 
 @media (max-width: 480px) {
   .contact-container h1 {
-    font-size: 18px; /* Further adjust font size for smaller screens */
+    font-size: 15px; 
   }
 
   .inputWithButton input {
-    padding: 8px; /* Adjust padding for mobile */
+    padding: 8px; 
   }
 
   .inputWithButton button {
-    padding: 8px; /* Adjust padding for mobile */
+    padding: 8px; 
   }
 }

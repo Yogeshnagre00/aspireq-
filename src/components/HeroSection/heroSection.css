@@ -33,7 +33,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap; /* Allows buttons to stack on smaller screens */
+  flex-wrap: wrap; 
 }
 
 .btn-primary,
@@ -67,7 +67,7 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
   .hero-section {
-    padding: 50px 10px; /* Adjust padding for smaller screens */
+    padding: 50px 10px; 
   }
 
   .hero-section h1 {
@@ -82,18 +82,18 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* Allows buttons to stack on smaller screens */
+    flex-wrap: wrap; 
   }
   .btn-primary,
   .btn-secondary {
-    font-size: 0.9rem; /* Adjust button font size */
-    padding: 10px 12px; /* Adjust button padding */
+    font-size: 0.9rem; 
+    padding: 10px 12px; 
   }
 }
 
 @media (max-width: 480px) {
   .hero-section {
-    padding: 40px 5px; /* Further reduce padding */
+    padding: 40px 5px; 
   }
 
   .hero-section h1 {
@@ -102,7 +102,7 @@
   }
 
   .hero-section p {
-    font-size: 10px; /* Smaller paragraph font size */
+    font-size: 10px; 
   }
   .hero-buttons {
     display: flex;
@@ -119,6 +119,6 @@
 
 
   .hero-buttons {
-    gap: 10px; /* Reduced gap between buttons */
+    gap: 10px; 
   }
 }

@@ -23,7 +23,7 @@
 }
 
 .image-slider img {
-  width: 78%; /* For larger screens */
+  width: 78%; 
   height: 350px;
   margin: 0 auto;
   display: block;
@@ -65,26 +65,16 @@
   color: var(--active-dot-color);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  /* Adjust the image size for tablets */
-  .image-slider img {
-    width: 85%; 
-    height: 300px;
-  }
-
-  .slider-item {
-    border-radius: 20px;
-  }
-  
-}
 
 @media (max-width: 768px) {
   /* Adjust the image size for mobile devices */
   .image-slider img {
-    width: 90%; 
-    height: 250px;
-    border-radius: 15px; 
+    width: 78%; 
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+    object-position: center;
   }
 
   /* Reduce the center mode padding on smaller screens */
@@ -92,6 +82,7 @@
     border-radius: 15px;
     transform: scale(1.2); 
   }
+  
   
   .slick-slide:not(.slick-center) img {
     filter: blur(4px);
@@ -115,11 +106,24 @@
 
 @media (max-width: 480px) {
   /* Further adjustments for small mobile devices */
-  .image-slider img {
-    width: 95%; 
-    height: 200px;
+  .slider-item {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    overflow: hidden;
+    border-radius: 30px;
+    outline: none;
   }
-
+  .image-slider img {
+    width: 80%; 
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+  }
+  .slick-center img {
+    border-radius: 7px;
+    transform: scale(1.2); 
+  }
   .slick-prev, .slick-next {
     font-size: 10px; /* Even smaller arrows */
   }
