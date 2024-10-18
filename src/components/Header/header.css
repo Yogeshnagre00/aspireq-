@@ -71,9 +71,9 @@ header {
 }
 
 /* Hidden Class to Maintain Layout */
-/* .hidden {
+.hidden {
   visibility: hidden; 
-} */
+}
 
 /* Responsive styles */
 @media (max-width: 768px) {

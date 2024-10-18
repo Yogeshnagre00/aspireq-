@@ -74,7 +74,7 @@ const Services = () => {
             </ul>
           </div>
           <div className="right-image">
-            <img src="./Images/5.jpg" alt="EHR Solutions" className="service-image" />
+            <img src="./Images/Illustrations/Heealthcare- electronic health record.png" alt="Electronic Health Records (EHR) Systems" className="service-image" />
           </div>
         </div>
       </div>
@@ -94,7 +94,7 @@ const Services = () => {
             </ul>
           </div>
           <div className="right-image">
-            <img src="./Images/4.jpg" alt="Telemedicine Solutions" className="service-image" />
+            <img src="./Images/Illustrations\Heealthcare - Telemedicine.png" alt="Telemedicine Solutions" className="service-image" />
           </div>
         </div>
       </div>
@@ -115,7 +115,7 @@ const Services = () => {
             </ul>
           </div>
           <div className="right-image">
-            <img src="./Images/3.jpg" alt="Remote Patient Monitoring" className="service-image" />
+            <img src="./Images/Illustrations/Heealthcare - RPM.png" alt="Remote Patient Monitoring" className="service-image" />
           </div>
         </div>
       </div>
@@ -195,11 +195,57 @@ const Services = () => {
             </p>
             <h3>Types of Fintech</h3>
             <ul>
-              <li>
+            <div className="section Digital-Payments">
+        <div className="content-container   reverse">
+          <div className="left-content">
+            <ul>
+            <li>
                 <strong>Digital Payments:</strong> Services like PayPal, Venmo,
                 and Apple Pay that facilitate online and mobile payments.
               </li>{" "}
-              <br />
+            </ul>
+          </div>
+          <div className="right-image">
+            <img src="./Images/Illustrations/Fintech - Digital Payment.png" alt="Digital Payment" className="service-image" />
+          </div>
+        </div>
+      </div>
+      <br />
+      <div className="section telemedicine-section">
+        <div className="content-container">
+          <div className="left-content">
+            <ul>
+            <li>
+                <strong>Banking:</strong> Neobanks like Chime and Revolut that
+                operate exclusively online without traditional physical branch
+                networks.
+              </li>
+            </ul>
+          </div>
+          <div className="right-image">
+            <img src="./Images/Illustrations/Fintech - Banking.png" alt="Banking" className="service-image" />
+          </div>
+        </div>
+      </div>
+      <br />
+      <div className="section telemedicine-section">
+        <div className="content-container  reverse">
+          <div className="left-content">
+            <ul>
+            <li>
+                <strong>Insurance:</strong> Insurtech companies like Lemonade
+                that use technology to offer more efficient and user-friendly
+                insurance services.
+              </li>
+
+            </ul>
+          </div>
+          <div className="right-image">
+            <img src="./Images/Illustrations/Fintech - Insurance.png" alt="Banking" className="service-image" />
+          </div>
+        </div>
+      </div>
+      <br />
               <li>
                 <strong>Lending:</strong> Platforms like LendingClub and Prosper
                 that offer peer-to-peer lending.
@@ -211,18 +257,7 @@ const Services = () => {
                 planning services.
               </li>
               <br />
-              <li>
-                <strong>Banking:</strong> Neobanks like Chime and Revolut that
-                operate exclusively online without traditional physical branch
-                networks.
-              </li>
-              <br />
-              <li>
-                <strong>Insurance:</strong> Insurtech companies like Lemonade
-                that use technology to offer more efficient and user-friendly
-                insurance services.
-              </li>
-              <br />
+             
               <li>
                 <strong>Cryptocurrency and Blockchain:</strong> Platforms like
                 Coinbase and Binance that allow users to buy, sell, and manage
@@ -242,6 +277,70 @@ const Services = () => {
               their money.
             </p>
             <h3>Key Functions of Banks:</h3>
+            <div className="section Wealth-Management">
+        <div className="content-container">
+          <div className="left-content">
+            <ul>
+            <li>
+                <strong>Wealth Management:</strong> Many banks offer investment
+                services, retirement accounts, and financial planning.
+              </li>
+            </ul>
+          </div>
+          <div className="right-image">
+            <img src="./Images/Illustrations/Banking - Wealth managment.png" alt=" Wealth managment" className="service-image" />
+          </div>
+        </div>
+      </div>
+      <br />
+      <div className="section Payment-Services">
+        <div className="content-container  reverse">
+          <div className="left-content">
+            <ul>
+            <li>
+                <strong>Payment Services:</strong> Banks facilitate payments
+                through checks, electronic transfers, and credit/debit cards.
+              </li>
+             
+            </ul>
+          </div>
+          <div className="right-image">
+            <img src="./Images/Illustrations/Banking - Payment Information.png" alt="Payment Information" className="service-image" />
+          </div>
+        </div>
+      </div>
+
+<br />
+  
+      <div className="section Loan-Management-System">
+        <div className="content-container">
+          <div className="left-content">
+            <ul>
+            <li>
+                <strong>
+                  Loan Management System (LMS) and Loan Origination System (LOS)
+                  Modules:
+                </strong>
+                <ul>
+                  <li>
+                    <strong>LMS:</strong> Automates the entire loan process from
+                    application to repayment, including customer information and
+                    collections.
+                  </li>
+                  <li>
+                    <strong>LOS:</strong> Manages the processing and appraisal
+                    of loan applications.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div className="right-image">
+            <img src="./Images/Illustrations/Banking - Loan managment.png" alt="Loan managment" className="service-image" />
+          </div>
+        </div>
+      </div>
+      <br />
             <ul>
               <li>
                 <strong>Accepting Deposits:</strong> Banks offer various types
@@ -253,14 +352,7 @@ const Services = () => {
                 individuals and businesses for various purposes, such as buying
                 a home, starting a business, or financing education.
               </li>
-              <li>
-                <strong>Payment Services:</strong> Banks facilitate payments
-                through checks, electronic transfers, and credit/debit cards.
-              </li>
-              <li>
-                <strong>Wealth Management:</strong> Many banks offer investment
-                services, retirement accounts, and financial planning.
-              </li>
+             
             </ul>
             <p>
               Banking applications are composed of various modules, each
@@ -287,23 +379,7 @@ const Services = () => {
                 balance and turnover of all accounting entities and facilitates
                 comprehensive financial reporting.
               </li>
-              <li>
-                <strong>
-                  Loan Management System (LMS) and Loan Origination System (LOS)
-                  Modules:
-                </strong>
-                <ul>
-                  <li>
-                    <strong>LMS:</strong> Automates the entire loan process from
-                    application to repayment, including customer information and
-                    collections.
-                  </li>
-                  <li>
-                    <strong>LOS:</strong> Manages the processing and appraisal
-                    of loan applications.
-                  </li>
-                </ul>
-              </li>
+              
               <li>
                 <strong>Fraud Detection Module:</strong> Monitors transactions
                 for suspicious activities and helps in preventing fraud. It uses
@@ -355,29 +431,70 @@ const Services = () => {
               insured events occur. Here are some key types of insurance:
             </p>
             <h3>Types of Insurance:</h3>
+            <div className="section Wealth-Management">
+        <div className="content-container  reverse">
+          <div className="left-content">
+            <ul>
+            <li>
+                <strong>Health Insurance:</strong> Covers medical expenses
+                related to illnesses, injuries, and other health conditions.
+              </li>
+            </ul>
+          </div>
+          <div className="right-image">
+            <img src="./Images/Illustrations/Insurance- health insurance.png" alt="health insurance" className="service-image" />
+          </div>
+        </div>
+      </div>
+      <br />
+      <div className="section Payment-Services">
+        <div className="content-container ">
+          <div className="left-content">
+            <ul>
+            <li>
+                <strong>Auto Insurance:</strong> Protects against financial
+                losses resulting from car accidents, theft, and damage.
+              </li>
+            </ul>
+          </div>
+          <div className="right-image">
+            <img src="./Images/Illustrations/Insurance - auto insurance.png" alt="auto insurance" className="service-image" />
+          </div>
+        </div>
+      </div>
+
+<br />
+  
+      <div className="section Loan-Management-System">
+        <div className="content-container reverse">
+          <div className="left-content">
+            <ul>
+            <li>
+                <strong>Travel Insurance:</strong> Offers coverage for trip
+                cancellations, medical emergencies, and other travel-related
+                issues.
+              </li>
+            </ul>
+          </div>
+          <div className="right-image">
+            <img src="./Images/Illustrations/Insurance - Travel insurance.png" alt="Loan managment" className="service-image" />
+          </div>
+        </div>
+      </div>
+      <br />
             <ul>
               <li>
                 <strong>Life Insurance:</strong> Provides financial support to
                 beneficiaries upon the policyholder’s death.
               </li>
-              <li>
-                <strong>Health Insurance:</strong> Covers medical expenses
-                related to illnesses, injuries, and other health conditions.
-              </li>
-              <li>
-                <strong>Auto Insurance:</strong> Protects against financial
-                losses resulting from car accidents, theft, and damage.
-              </li>
+             
+             
               <li>
                 <strong>Home Insurance:</strong> Covers damage to a home and its
                 contents due to events such as fire, theft, or natural
                 disasters.
               </li>
-              <li>
-                <strong>Travel Insurance:</strong> Offers coverage for trip
-                cancellations, medical emergencies, and other travel-related
-                issues.
-              </li>
+             
             </ul>
             <p>
               Insurance applications are designed to manage various aspects of
@@ -478,17 +595,31 @@ const Services = () => {
             </p>
 
             <h3>Types of E-commerce:</h3>
+            <div className="section Wealth-Management">
+        <div className="content-container">
+          <div className="left-content">
+            <ul>
+            <li>
+                <strong>Business-to-Business (B2B):</strong> Transactions
+                between businesses, such as manufacturers selling to wholesalers
+                or wholesalers supplying retailers.
+              </li>
+            </ul>
+          </div>
+          <div className="right-image">
+            <img src="./Images/Illustrations/Ecommerce - b2b.png" alt="Business-to-Business" className="service-image" />
+          </div>
+        </div>
+      </div>
+      <br />
+     
             <ul>
               <li>
                 <strong>Business-to-Consumer (B2C):</strong> The most prevalent
                 form, where businesses sell directly to consumers. Notable
                 examples include online retailers like Amazon and Flipkart.
               </li>
-              <li>
-                <strong>Business-to-Business (B2B):</strong> Transactions
-                between businesses, such as manufacturers selling to wholesalers
-                or wholesalers supplying retailers.
-              </li>
+             
               <li>
                 <strong>Consumer-to-Consumer (C2C):</strong> Platforms like eBay
                 or OLX facilitate transactions where consumers sell directly to
@@ -524,20 +655,48 @@ const Services = () => {
             </ul>
 
             <h3>How E-commerce Works:</h3>
-            <ol>
-              <li>
+            <div className="section Payment-Services">
+        <div className="content-container  reverse">
+          <div className="left-content">
+            <ul>
+            <li>
+                <strong>Shopping Cart:</strong> Customers can add selected items
+                to their virtual shopping cart for easy checkout.
+              </li>
+            </ul>
+          </div>
+          <div className="right-image">
+            <img src="./Images/Illustrations/Ecommerce - shopping cart.png" alt="shopping cart" className="service-image" />
+          </div>
+        </div>
+      </div>
+
+<br />
+  
+      <div className="section Loan-Management-System">
+        <div className="content-container">
+          <div className="left-content">
+            <ul>
+            <li>
                 <strong>Online Storefront:</strong> Businesses establish an
                 online presence using e-commerce platforms like Shopify or
                 WooCommerce.
               </li>
+            </ul>
+          </div>
+          <div className="right-image">
+            <img src="./Images/Illustrations/Ecommerce - online store.png" alt="online store" className="service-image" />
+          </div>
+        </div>
+      </div>
+      <br />
+            <ul>
+             
               <li>
                 <strong>Product Listings:</strong> Products are displayed with
                 detailed descriptions, prices, and images to attract customers.
               </li>
-              <li>
-                <strong>Shopping Cart:</strong> Customers can add selected items
-                to their virtual shopping cart for easy checkout.
-              </li>
+              
               <li>
                 <strong>Payment Processing:</strong> Secure payment gateways
                 facilitate safe and efficient transaction processing.
@@ -547,7 +706,7 @@ const Services = () => {
                 either shipped to customers or delivered digitally for digital
                 products.
               </li>
-            </ol>
+            </ul>
 
             <p>
               With the evolution of e-commerce, businesses have the opportunity
