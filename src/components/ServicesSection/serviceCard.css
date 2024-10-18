@@ -7,17 +7,44 @@
   transition: transform 0.2s ease-in-out;
 }
 
-/* .service-card:hover {
-  transform: translateY(-8px);
-} */
-
 .service-card h3 {
   margin: 15px 0;
   margin-left: auto;
-  font-size: 20px;
+  font-size: 20px; 
 }
 
 .service-card p {
   color: #000000;
-  font-size: 16px;
+  font-size: 16px; 
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .service-card {
+    padding: 15px 20px; 
+  }
+
+  .service-card h3 {
+    font-size: 18px; 
+    margin: 10px 0; 
+  }
+
+  .service-card p {
+    font-size: 14px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    padding: 10px 15px; 
+  }
+
+  .service-card h3 {
+    font-size: 16px; 
+    margin: 8px 0; 
+  }
+
+  .service-card p {
+    font-size: 12px; 
+  }
 }
