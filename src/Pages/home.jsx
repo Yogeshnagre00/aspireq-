@@ -11,8 +11,8 @@ function Home() {
     <div className="App">
       <Navbar />
       <HeroSection />
-      <ImageSlider />
-      <ServicesSection />
+      <ImageSlider /> 
+       <ServicesSection />
       <FAQSection />
       <ContactSection />
       <Footer />

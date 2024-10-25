@@ -23,6 +23,7 @@
 @media (max-width: 768px) {
   .services-section {
     padding: 40px 15px;
+    width: 98%;
   }
 
   .services-section h2 {
@@ -32,13 +33,15 @@
 
   .services-grid {
     gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 400px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
 @media (max-width: 480px) {
   .services-section {
     padding: 30px 10px;
+    width: 98%;
   }
 
   .services-section h2 {
@@ -47,7 +50,7 @@
   }
 
   .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
-    width: 95%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 88%;
   }
 }

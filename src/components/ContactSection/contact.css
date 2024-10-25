@@ -1,5 +1,4 @@
 .contact-section {
-  /* padding: 40px 30px; */
   display: flex;
   max-width: 60%;
   margin: 0 auto 5%;
@@ -72,15 +71,12 @@
   transition: background 0.3s ease;
 }
 
-.inputWithButton button:hover {
-  background: linear-gradient(135deg, #007bff 0%, #1e90ff 100%);
-}
-
 /* Responsive Styles */
 @media (max-width: 768px) {
   .contact-section {
     max-width: 85%; 
     height: auto; 
+    border-radius: 30px;
   }
 
   .contact-container h1 {
@@ -88,21 +84,24 @@
   }
 
   .inputWithButton {
-    width: 100%;
-    margin-left: 0; 
+    width: 90%;
+    margin-left: 10px; 
     margin-bottom: 10px;
+    padding: 0;
   }
 
   .inputWithButton input {
-    font-size: 0.8rem; 
+    font-size: 0.6rem; 
   }
 
   .inputWithButton button {
     font-size: 0.8rem; 
+    margin:3px;
   }
 }
 
 @media (max-width: 480px) {
+
   .contact-container h1 {
     font-size: 15px; 
   }
@@ -112,6 +111,6 @@
   }
 
   .inputWithButton button {
-    padding: 8px; 
+    padding: 3px 8px; 
   }
 }

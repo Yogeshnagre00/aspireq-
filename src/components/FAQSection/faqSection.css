@@ -52,8 +52,8 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
   .faq-section {
-    padding: 40px; 
-    max-width: 480px;
+    padding: 50px; 
+    max-width: 400px;
   }
 
   .faq-section h2 {
@@ -79,7 +79,7 @@
 
 @media (max-width: 480px) {
   .faq-section {
-    padding: 40px;
+    padding: 50px;
   }
 
   .faq-section h2 {

@@ -1,15 +1,20 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react"; // Import useState for the mobile menu toggle
 import "./header.css";
 
 const Navbar = () => {
-  const location = useLocation(); // Get the current location
-  const navigate = useNavigate(); // Hook for programmatic navigation
+  const location = useLocation(); 
+  const navigate = useNavigate(); 
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
   const handleLetsTalkClick = () => {
-    // Redirect to "/contactUs" when the button is clicked
     if (location.pathname !== "/contactUs") {
       navigate("/contactUs");
     }
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen); 
   };
 
   return (
@@ -18,34 +23,34 @@ const Navbar = () => {
         <div className="logo">
           <img src="./Images/Frame 27319.png" alt="Logo" />
         </div>
-        <ul className="nav-links">
+        
+        <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
           <li>
             <Link to="/">HOME</Link>
           </li>
-
           <li>
-            <Link to="/services"> SERVICES</Link>
+            <Link to="/services">SERVICES</Link>
           </li>
-
           <li>
             <Link to="/blogscasestudies">BLOGS & CASE STUDIES</Link>
           </li>
-          {/* Dropdown for ABOUT US */}
-          <li className="dropdown">
-            <a href="#">ABOUT US</a>
+          <li >
+          <Link to="/">ABOUT US</Link>
           </li>
           <li>
             <Link to="/contactUs">CONTACT US</Link>
           </li>
         </ul>
-        {/* Conditionally apply a class to the button based on the current path */}
         <a
-  href="#"
-  className={`btn ${location.pathname === "/contactUs" ? "hidden" : ""}`}
-  onClick={handleLetsTalkClick}
->
-  Let&apos;s Connect
-</a>
+          href="#"
+          className={`btn ${location.pathname === "/contactUs" ? "hidden" : ""}`}
+          onClick={handleLetsTalkClick}
+        >
+          Let&apos;s Connect
+        </a>
+        <div className="hamburger" onClick={toggleMenu}>
+          &#9776; 
+        </div>
       </nav>
     </header>
   );

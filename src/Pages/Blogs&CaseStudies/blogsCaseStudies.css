@@ -157,6 +157,9 @@
 
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr; /* Stacks cards in a single column on smaller screens */
+    grid-template-columns: 1fr; 
+  }
+  .bcsh1{
+    font-size: 2rem;
   }
 }
