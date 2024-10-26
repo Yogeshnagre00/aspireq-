@@ -5,15 +5,15 @@ import "./imageSlider.css";
 
 const ImageSlider = () => {
   const settings = {
-    // dots: true,
-    // infinite: true,
-    // speed: 400,
-    // slidesToShow: 1,
-    // slidesToScroll: 1,
+    dots: true,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     centerMode: true,
     centerPadding: "24%",
-    // autoplay: true,
-    // autoplaySpeed: 5000,
+    autoplay: true,
+    autoplaySpeed: 5000,
   };
 
   const images = [
