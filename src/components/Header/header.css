@@ -2,7 +2,7 @@
 :root {
   --header-bg-color: white;
   --header-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --navbar-padding: 0 6rem;
+  --navbar-padding: 0 5rem;
   --nav-link-color: #555;
   --nav-link-hover-color: #2b4d82;
   --btn-bg-color: #1ea0ff;
@@ -54,7 +54,7 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 50px;
+  gap: 30px;
 }
 
 /* Link Styles */
@@ -68,6 +68,10 @@ header {
 
 .nav-links a:hover {
   color: var(--nav-link-hover-color);
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 /* Mobile-Specific Styles */
@@ -85,7 +89,7 @@ header {
     position: absolute;
     top: 60px;
     right: 0;
-    width: 100%;
+    /* width: 100%; */
     background-color: var(--header-bg-color);
     flex-direction: column;
     padding: 0;
@@ -104,9 +108,10 @@ header {
   }
 
   .btn {
-    margin-left: 70px;
+    margin-left: 120px;
     padding: 7px 20px;
     margin-top: 8px;
+    white-space: nowrap;
   }
 
   .logo img {
@@ -121,8 +126,8 @@ header {
 
   .btn {
     font-size: 15px;
-    margin-left: 40px;
-    padding: 7px 8px;
+    margin-left: 100px;
+    padding: 6px 10px;
   }
 
   .logo img {

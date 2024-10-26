@@ -2,24 +2,22 @@
   background-color: rgb(30, 144, 255);
   color: rgb(235, 233, 233);
   cursor: pointer;
-  padding: 7px;
+  padding: 10px;
   position: relative;
   text-align: center;
-  
 }
 
 .services-container {
-  max-width:90%;
+  max-width: 90%;
   margin: 10px auto;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.821);
   line-height: 1.6;
   position: relative;
-  z-index: 1; 
+  z-index: 1;
 }
 
 nav ul {
-
   list-style: none;
   padding: 0;
 }
@@ -35,21 +33,26 @@ nav ul li a {
 }
 .back-home {
   display: flex;
-  background-color: transparent; 
+  position: absolute;
+  background-color: rgb(30, 144, 255);
+  border-radius: 50%;
   color: #ffffff;
-  border: none; 
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  border: none;
   font-size: 25px;
   cursor: pointer;
   margin-left: 60px;
+  height: 35px;
+  width: 35px;
 }
 main {
   padding: 20px;
 }
 .service-image {
-  width: 400px; 
+  width: 400px;
   height: 200px;
-  margin-right: 15px; 
-
+  margin-right: 15px;
 }
 
 .service-section {
@@ -82,8 +85,8 @@ p {
 
 .left-content {
   flex: 1;
-  max-width: 500px; 
-   justify-content: flex-end;
+  max-width: 500px;
+  justify-content: flex-end;
 }
 
 .right-image {
@@ -117,65 +120,69 @@ p {
   .reverse {
     flex-direction: column;
   }
+  .back-home{
+    visibility:hidden;
+  }
 }
 
 /* Responsive design for smaller mobile devices */
 @media (max-width: 480px) {
   .services-header {
     background-color: rgb(30, 144, 255);
-  color: rgb(235, 233, 233);
-  cursor: pointer;
-  padding: 7px;
-  position: relative;
-  text-align: flex-start;
+    color: rgb(235, 233, 233);
+    cursor: pointer;
+    padding: 7px;
+    position: relative;
+    text-align: flex-start;
   }
 
   .services-container {
-    max-width: 95%; 
-    padding: 15px; 
+    max-width: 95%;
+    padding: 15px;
   }
 
   h1 {
-    font-size: 24px; 
+    font-size: 24px;
   }
 
   .services-container h3 {
-        margin-left: 0; 
+    margin-left: 0;
     font-size: 18px;
   }
 
   p {
-    font-size: 14px; 
+    font-size: 14px;
   }
 
   .content-container {
-    flex-direction: column; 
-    gap: 20px; 
-    margin-bottom: 30px; 
-    margin-left: -60px;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+    margin-left: -30px;
   }
 
-  .left-content, .right-image {
+  .left-content,
+  .right-image {
     flex: 1;
     max-width: 500px;
     /* justify-content: center; */
   }
 
   .right-image {
-    margin-top: 10px; 
+    margin-top: 10px;
   }
 
   .right-image img {
-    height: auto; 
-    width: 100%; 
+    height: auto;
+    width: 100%;
   }
 
   nav ul li {
     /* display: flix;  */
-    margin: 10px 10px; 
+    margin: 10px 10px;
   }
 
   nav ul li a {
-    font-size: 12px; 
+    font-size: 12px;
   }
 }

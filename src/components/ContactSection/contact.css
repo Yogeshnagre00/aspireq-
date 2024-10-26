@@ -79,8 +79,12 @@
     border-radius: 30px;
   }
 
+  .contact-container{
+    padding: 10px 10px;
+  }
   .contact-container h1 {
-    font-size: 20px; 
+    font-size: 10px; 
+    margin-bottom: 15px;
   }
 
   .inputWithButton {

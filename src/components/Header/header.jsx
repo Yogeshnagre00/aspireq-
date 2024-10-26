@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react"; // Import useState for the mobile menu toggle
+import { useState } from "react"; 
 import "./header.css";
 
 const Navbar = () => {

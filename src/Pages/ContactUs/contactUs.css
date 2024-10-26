@@ -157,32 +157,25 @@ textarea {
   /* Contact Form Container Styling */
   .contact-form-container {
     max-width: 90%;
-    padding: 40px;
+    padding: 60px;
   }
-
-  /* Contact Header Styling */
   .contacth1 {
     font-size: 2rem;
   }
-
-  /* Contact Form Styling */
   .contact-form {
     padding: 20px;
     gap: 20px;
+    box-shadow: none;
   }
-
-  /* Form Row Styling */
   .form-row {
     flex-direction: column;
     gap: 20px;
   }
 
-  /* Label Styling */
   label {
     font-size: 0.8rem;
   }
 
-  /* Input and Textarea Styling */
   input,
   textarea {
     font-size: 0.9rem;
@@ -193,14 +186,11 @@ textarea {
   textarea {
     height: 100px;
   }
-
-  /* Submit Button Styling */
   .submit-btn {
     padding: 10px 18px;
     font-size: 1rem;
   }
 
-  /* Modal Content Styling */
   .custom-modal-content {
     max-width: 90%;
     padding: 15px;
@@ -224,9 +214,6 @@ textarea {
 
 /* For extra small devices like mobile (up to 480px) */
 @media (max-width: 480px) {
-  .contact-form-container {
-    padding: 20px;
-  }
 
   .contacth1 {
     font-size: 1.8rem;
@@ -235,6 +222,7 @@ textarea {
   .contact-form {
     padding: 15px;
     gap: 15px;
+    box-shadow: none;
   }
 
 

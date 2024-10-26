@@ -79,8 +79,8 @@
 
   /* Reduce the center mode padding on smaller screens */
   .slick-center img {
-    border-radius: 15px;
-    transform: scale(1.2); 
+    border-radius: 20px;
+    transform: scale(1.4); 
   }
   
   
@@ -121,15 +121,15 @@
     object-position: center;
   }
   .slick-center img {
-    border-radius: 7px;
+    border-radius: 13px;
     transform: scale(1.2); 
   }
   .slick-prev, .slick-next {
-    font-size: 10px; /* Even smaller arrows */
+    font-size: 8px; 
   }
 
   .image-slider {
-    padding: 8px 0 20px;
+    padding: 8px 0 10px;
   }
   .slick-dots li button:before {
     margin-top: 8px; 

@@ -32,7 +32,7 @@
   }
 
   .services-grid {
-    gap: 15px;
+    gap: 17px;
     max-width: 400px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
@@ -40,8 +40,8 @@
 
 @media (max-width: 480px) {
   .services-section {
-    padding: 30px 10px;
-    width: 98%;
+    padding: 30px 0px;
+    width: 100%;
   }
 
   .services-section h2 {
@@ -51,6 +51,6 @@
 
   .services-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    width: 88%;
+    width: 78%;
   }
 }
