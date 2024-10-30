@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import NotFound from "./components/notFound";
 
-const AboutUs = React.lazy(() => import("./Pages/AboutUs/aboutus.jsx"));
+//const AboutUs = React.lazy(() => import("./Pages/AboutUs/aboutus.jsx"));
 
 const Services = React.lazy(() => import("./Pages/ServicesPage/services"));
 
@@ -28,7 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/blogscasestudies" element={<BlogsCaseStudies />} />
-          <Route path="/aboutus" element={<AboutUs/>} />
+          {/* <Route path="/aboutus" element={<AboutUs/>} /> */}
           <Route path="/contactus" element={<ContactForm />} />
           <Route path="/cookiespolicy" element={<CookiesPolicy />} />
           <Route path="privacypolicy" element={<PrivacyPolicy />} />
