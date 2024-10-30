@@ -137,7 +137,7 @@
     height: auto;
   }
   .col-md-3 {
-    flex: 1 0 100%; 
+    flex: 1 0 100%;
     text-align: center;
     padding: 0 10px;
     margin-bottom: 20px;
@@ -146,8 +146,8 @@
   .footer-heading {
     font-size: 1.1em;
   }
-  .footer-text{   
-   margin-left: 130px;
+  .footer-text {
+    margin-left: 130px;
   }
 
   .footer-links li,
@@ -162,7 +162,7 @@
 
 @media (max-width: 480px) {
   .footer {
-    padding: 15px 0 0 0 ;
+    padding: 15px 0 0 0;
     align-items: center;
   }
 
@@ -173,7 +173,6 @@
 
   .footer-bottom {
     flex-direction: column;
-    
   }
   .footer-copyright {
     text-align: start;
@@ -182,6 +181,5 @@
   }
   .footer-social a {
     font-size: 1.5rem;
+  }
 }
-}
-

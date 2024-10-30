@@ -113,7 +113,3 @@ export const Footer = () => {
     </footer>
   );
 };
-
-{
-  /* <img src="./Images/instagram.png" /> */
-}

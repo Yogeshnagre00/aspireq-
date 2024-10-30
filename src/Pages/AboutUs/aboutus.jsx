@@ -84,6 +84,7 @@ const AbouttUs = () => {
           <div className="line left-up"></div>
           <div className="line top-right-line"></div>
           <div className="line top-right-width"></div>
+          <div className="line top-right-height"></div>
           <div className="line bottom-center-line"></div>
           <div className="line bottom-center-width"></div>
         </div>
