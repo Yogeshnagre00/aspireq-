@@ -47,7 +47,7 @@ const AbouttUs = () => {
       </section>
       <section className="our-vision">
         <h2>Our Vision</h2>
-        <div className="container">
+        <div className="vision-container">
           <div className="center-circle">
             <img
               src="./Images/Frame 27319.png"
