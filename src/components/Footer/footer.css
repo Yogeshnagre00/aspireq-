@@ -5,19 +5,22 @@
   flex-direction: column;
   min-height: 100vh;
 }
+.content {
+  flex: 1;
+}
 
 .footer {
-  background-color: #f5f5f5;
-  padding: 20px 0px 0 0px;
+  /* background-color: #f9f9f982; */
+  padding: 20px 30px 0 30px;
   color: #333;
-  width: 100%;
+  width: 96%;
   position: relative;
   bottom: 0;
   left: 0;
 }
 
-.container {
-  width: 93%;
+.footer-container {
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -25,15 +28,18 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
 }
 
 .col-md-3 {
   padding: 0 30px;
   margin-bottom: 10px;
-  font-family: "Poppins", sans-serif;
 }
-
+.col-md-3:last-child {
+  width: 520px;
+  align-items: center;
+  margin-top: 30px;
+  padding: 0;
+}
 /* Added: Ensure logo is centered in its column */
 .footer-logo img {
   max-width: 100%;
@@ -42,7 +48,7 @@
 
 .footer-text {
   width: 30%;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 /* Footer Heading styles */
@@ -75,10 +81,27 @@
 .footer-contact li {
   color: #333;
 }
+.map-container {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
 /* Adjusted text alignment for social media icons */
 .footer-bottom {
   display: flex;
+  height: 50px;
   justify-content: space-between;
   align-items: center;
 }
@@ -103,7 +126,6 @@
 .footer-copyright {
   text-align: start;
   font-size: 1rem;
-  padding-top: 20px;
 }
 .fa-instagram {
   color: transparent;
@@ -130,14 +152,16 @@
 @media (max-width: 768px) {
   .row {
     flex-direction: column;
-    align-items: center;
   }
-  .footer-logo img {
-    max-width: 100%;
-    height: auto;
+  .col-md-3:last-child {
+    width: 300px;
+  }
+  .map-container {
+    padding-top: 75%; /* Adjust aspect ratio for smaller screens */
   }
   .col-md-3 {
     flex: 1 0 100%;
+    margin: 0 auto;
     text-align: center;
     padding: 0 10px;
     margin-bottom: 20px;
@@ -146,24 +170,28 @@
   .footer-heading {
     font-size: 1.1em;
   }
-  .footer-text {
-    margin-left: 130px;
-  }
 
   .footer-links li,
   .footer-contact li {
     margin-bottom: 8px;
   }
-
-  .footer-social {
-    margin-bottom: 10px;
+  .footer-copyright {
+    text-align: start;
+    font-size: 0.5rem;
+  }
+  .footer-social a {
+    display: inline-block;
+    flex-direction: row;
+    color: #000000;
+    font-size: 0.5rem;
+    transition: color 0.3s ease;
   }
 }
 
 @media (max-width: 480px) {
   .footer {
-    padding: 15px 0 0 0;
-    align-items: center;
+    padding: 15px;
+    width: 91%;
   }
 
   .col-md-3 {
@@ -172,14 +200,6 @@
   }
 
   .footer-bottom {
-    flex-direction: column;
-  }
-  .footer-copyright {
-    text-align: start;
-    font-size: 15px;
-    padding-top: 10px;
-  }
-  .footer-social a {
-    font-size: 1.5rem;
+    flex-direction: row;
   }
 }
