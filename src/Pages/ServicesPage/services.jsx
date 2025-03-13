@@ -1,13 +1,28 @@
 import { useEffect } from "react";
 import { Element, Link } from "react-scroll";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faHome } from '@fortawesome/free-solid-svg-icons';
+import Navbar from "../../components/Header/header";
 import "./services.css";
-import { useNavigate } from "react-router-dom";
+import { Footer } from "../../components/Footer/footer";
+
+const services = [
+  { name: "Mobile Development", icon: "📱" },
+  { name: "Mobility Services", icon: "🚀" },
+  { name: "Software Consulting", icon: "💻" },
+  { name: "Finance", icon: "💰" },
+  { name: "Banking", icon: "🏦" },
+  { name: "Insurance", icon: "🛡️" },
+  { name: "E-commerce", icon: "🛍️" },
+];
+const ServiceCard = ({ service }) => (
+  <div className="service-card">
+    <div className="service-icon">{service.icon}</div>
+    <h3 className="service-title">{service.name}</h3>
+    <p className="service-text">Sample text. Click to edit the text.</p>
+    <button className="service-button">MORE</button>
+  </div>
+);
 
 const Services = () => {
-  const navigate = useNavigate();
-
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
@@ -17,46 +32,20 @@ const Services = () => {
       }
     }
   }, []);
+
   return (
     <div>
-      <header className="services-header">
+      <Navbar />
+      <div className="services-header">
         <h1>Our Services</h1>
-        <nav>
-          <ul>
-            <li>
-              <button onClick={() => navigate(-1)} className="back-home">
-                <i className="fa fa-home" aria-hidden="true"></i>
-              </button>
-            </li >
-            <li >
-              <Link to="healthcare" smooth={true} duration={400}>
-                Healthcare
-              </Link>
-            </li>
-            <li>
-              <Link to="finance" smooth={true} duration={400}>
-                Finance
-              </Link>
-            </li>
-            <li>
-              <Link to="banking" smooth={true} duration={400}>
-                Banking
-              </Link>
-            </li>
-            <li>
-              <Link to="insurance" smooth={true} duration={400}>
-                Insurance
-              </Link>
-            </li>
-            <li>
-              <Link to="ecommerce" smooth={true} duration={400}>
-                E-commerce
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
+        <div className="services-grid">
+          {services.map((service, index) => (
+            <ServiceCard key={index} service={service} />
+          ))}
+        </div>
+      </div>
+      <Footer />
+    </div>
       <main className="services-container">
         <Element name="healthcare">
           <section className="service-section" id="healthcare">
@@ -787,6 +776,7 @@ const Services = () => {
           </section>
         </Element>
       </main>
+      <Footer />
     </div>
   );
 };

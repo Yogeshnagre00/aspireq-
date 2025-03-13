@@ -1,51 +1,47 @@
 .services-header {
-  background-color: rgb(30, 144, 255);
   color: rgb(235, 233, 233);
   cursor: pointer;
   padding: 10px;
+  margin-top: 6%;
   position: relative;
   text-align: center;
 }
 
 .services-container {
   max-width: 90%;
-  margin: 10px auto;
+  margin: 1px auto;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.821);
   line-height: 1.6;
   position: relative;
   z-index: 1;
 }
-
-nav ul {
+.services-header ul {
   list-style: none;
   padding: 0;
+  text-align: center;
 }
 
-nav ul li {
-  display: inline;
+.services-header ul li {
+  display: inline-block;
   margin: 0 15px;
 }
 
-nav ul li a {
-  color: white;
+.services-header ul li a {
+  color: rgba(80, 79, 79, 0.89);
+  font-size: 19px;
   text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
 }
-.back-home {
-  display: flex;
-  position: absolute;
-  background-color: rgb(30, 144, 255);
-  border-radius: 50%;
-  color: #ffffff;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
-  align-items: center;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  margin-left: 60px;
-  height: 35px;
-  width: 35px;
+.services-header h1 {
+  color: #151515d1;
 }
+
+.services-header ul li a:hover {
+  color: rgb(0, 102, 204);
+}
+
 main {
   padding: 20px;
 }

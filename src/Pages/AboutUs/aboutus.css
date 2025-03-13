@@ -53,6 +53,13 @@
   color: #666;
   margin-bottom: 20px;
 }
+.about-image-container {
+  position: relative;
+  margin-top: 30%;
+  margin-left: 10%;
+  height: auto;
+  width: 80%;
+}
 
 .about-image {
   width: 80%;
@@ -61,6 +68,9 @@
 }
 
 /* our vison */
+.our-vision {
+  margin-top: 10%;
+}
 
 .our-vision h2 {
   text-align: center;
@@ -345,4 +355,23 @@
 .card p {
   color: #666;
   font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  .about-section,
+  .feature-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .feature-card {
+    text-align: center;
+  }
+  .about-image-container,
+  .feature-image-container {
+    width: 100%;
+  }
+  .our-culture h2,
+  .features-section h2,
+  .our-vision h2 {
+    width: 80%;
+  }
 }

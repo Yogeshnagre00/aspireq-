@@ -1,11 +1,11 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react"; 
+import { useState } from "react";
 import "./header.css";
 
 const Navbar = () => {
-  const location = useLocation(); 
-  const navigate = useNavigate(); 
-  const [isMenuOpen, setIsMenuOpen] = useState(false); 
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLetsTalkClick = () => {
     if (location.pathname !== "/contactUs") {
@@ -14,8 +14,11 @@ const Navbar = () => {
   };
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); 
+    setIsMenuOpen(!isMenuOpen);
   };
+
+  // Helper function to determine if a link is active
+  const isActive = (path) => (location.pathname === path ? "active-link" : "");
 
   return (
     <header>
@@ -23,33 +26,48 @@ const Navbar = () => {
         <div className="logo">
           <img src="./Images/Frame 27319.png" alt="Logo" />
         </div>
-        
-        <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+
+        <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
           <li>
-            <Link to="/">HOME</Link>
+            <Link to="/" className={isActive("/")}>
+              HOME
+            </Link>
           </li>
           <li>
-            <Link to="/services">SERVICES</Link>
+            <Link to="/services" className={isActive("/services")}>
+              SERVICES
+            </Link>
           </li>
           <li>
-            <Link to="/blogscasestudies">BLOGS & CASE STUDIES</Link>
-          </li>
-          <li >
-          <Link to="/aboutus">ABOUT US</Link>
+            <Link
+              to="/blogscasestudies"
+              className={isActive("/blogscasestudies")}
+            >
+              BLOGS & CASE STUDIES
+            </Link>
           </li>
           <li>
-            <Link to="/contactUs">CONTACT US</Link>
+            <Link to="/aboutus" className={isActive("/aboutus")}>
+              ABOUT US
+            </Link>
+          </li>
+          <li>
+            <Link to="/contactUs" className={isActive("/contactUs")}>
+              CONTACT US
+            </Link>
           </li>
         </ul>
         <a
           href="#"
-          className={`btn ${location.pathname === "/contactUs" ? "hidden" : ""}`}
+          className={`btn ${
+            location.pathname === "/contactUs" ? "hidden" : ""
+          }`}
           onClick={handleLetsTalkClick}
         >
           Let&apos;s Connect
         </a>
         <div className="hamburger" onClick={toggleMenu}>
-          &#9776; 
+          &#9776;
         </div>
       </nav>
     </header>

@@ -69,6 +69,10 @@ header {
 .nav-links a:hover {
   color: var(--nav-link-hover-color);
 }
+.active-link {
+  color: var(--btn-bg-color);
+  font-weight: bold;
+}
 
 .hidden {
   visibility: hidden;
