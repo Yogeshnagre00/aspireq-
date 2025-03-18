@@ -1,4 +1,6 @@
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
+import { FaArrowUp } from "react-icons/fa";
+import { animateScroll as scroll } from "react-scroll";
 import { Element, Link } from "react-scroll";
 import {
   FaHome,
@@ -11,7 +13,22 @@ import Navbar from "../../components/Header/header";
 import "./services.css";
 import { Footer } from "../../components/Footer/footer";
 
+
 const Services = () => {
+  const [showTopBtn, setShowTopBtn] = useState(false);
+
+// Show button when scrolled down
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      setShowTopBtn(true);
+    } else {
+      setShowTopBtn(false);
+    }
+  };
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
@@ -32,7 +49,7 @@ const Services = () => {
             to="healthcare"
             smooth={true}
             duration={400}
-            className="service-card"
+            className="services-card"
           >
             <FaHome className="service-icon" />
             <span>Healthcare</span>
@@ -41,8 +58,9 @@ const Services = () => {
           <Link
             to="finance"
             smooth={true}
+            offset={-90}
             duration={400}
-            className="service-card"
+            className="services-card"
           >
             <FaMoneyBillWave className="service-icon" />
             <span>Finance</span>
@@ -51,8 +69,9 @@ const Services = () => {
           <Link
             to="banking"
             smooth={true}
+            offset={-90}
             duration={400}
-            className="service-card"
+            className="services-card"
           >
             <FaUniversity className="service-icon" />
             <span>Banking</span>
@@ -61,8 +80,9 @@ const Services = () => {
           <Link
             to="insurance"
             smooth={true}
+            offset={-90}
             duration={400}
-            className="service-card"
+            className="services-card"
           >
             <FaShieldAlt className="service-icon" />
             <span>Insurance</span>
@@ -72,7 +92,8 @@ const Services = () => {
             to="ecommerce"
             smooth={true}
             duration={400}
-            className="service-card"
+            offset={-90}
+            className="services-card"
           >
             <FaShoppingCart className="service-icon" />
             <span>E-commerce</span>
@@ -809,6 +830,14 @@ const Services = () => {
           </section>
         </Element>
       </main>
+      {showTopBtn && (
+  <button
+    className="back-to-top"
+    onClick={() => scroll.scrollToTop({ duration: 500 })}
+  >
+    <FaArrowUp />
+  </button>
+)}
       <Footer />
     </div>
   );

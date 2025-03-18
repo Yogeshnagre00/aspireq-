@@ -6,7 +6,7 @@
   --nav-link-color: #555;
   --nav-link-hover-color: #2b4d82;
   --btn-bg-color: #1ea0ff;
-  --btn-hover-bg-color: #5fa6e8;
+  --btn-hover-bg-color: #1ea0ff;
 }
 
 /* Default mobile header styles */
@@ -54,13 +54,13 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 50px;
 }
 
 /* Link Styles */
 .nav-links a {
   text-decoration: none;
-  color: var(--nav-link-color);
+  color: #181818;
   font-size: 15px;
   padding: 10px 0;
   transition: color 0.3s;
@@ -70,7 +70,7 @@ header {
   color: var(--nav-link-hover-color);
 }
 .active-link {
-  color: var(--btn-bg-color);
+  color: var(--nav-link-hover-color);
   font-weight: bold;
 }
 

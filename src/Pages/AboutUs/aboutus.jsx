@@ -12,10 +12,7 @@ const AbouttUs = () => {
   return (
     <>
       <Navbar />
-      <div className="heading">
-        <h1 className="h1">About Us</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-      </div>
+
       <section className="about-section">
         {/* Who We Are Section */}
         <div className="about-card">
@@ -86,6 +83,7 @@ const AbouttUs = () => {
           />
         </div>
       </section>
+      {/* Our Vision */}
       <section className="our-vision">
         <h2>Our Vision</h2>
         <div className="vision-container">
@@ -130,6 +128,7 @@ const AbouttUs = () => {
           <div className="line bottom-center-width"></div>
         </div>
       </section>
+      {/* Feature SEction */}
       <section className="features-section">
         <h2>Features</h2>
         <div className="feature-card">
@@ -174,6 +173,7 @@ const AbouttUs = () => {
           </div>
         </div>
       </section>
+      {/* Our culture  */}
       <section className="our-culture">
         <h2>Our Culture</h2>
         <div className="culture-cards">

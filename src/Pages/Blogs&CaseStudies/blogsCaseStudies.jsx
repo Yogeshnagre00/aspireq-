@@ -1,15 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ContactSection from "../../components/ContactSection/contact";
 import FAQSection from "../../components/FAQSection/faqSection";
 import { Footer } from "../../components/Footer/footer";
 import Navbar from "../../components/Header/header";
 import "./blogsCaseStudies.css";
 import { BlogCard, CaseStudyCard } from "./card";
+import { blogData, caseStudyData } from "../../data/blog&CaseStudiesData";
 
 const BlogsCaseStudies = () => {
-  const [activeTab, setActiveTab] = useState(
-    localStorage.getItem("activeTab") || "Blogs"
-  );
+  const [activeTab, setActiveTab] = useState(""); // empty means show all by default
+  const [shuffledData, setShuffledData] = useState([]);
+
+  // Shuffle logic
+  useEffect(() => {
+    const combined = [
+      ...blogData.map((item) => ({ ...item, type: "Blog" })),
+      ...caseStudyData.map((item) => ({ ...item, type: "Case Studies" })),
+    ];
+    const shuffled = combined.sort(() => Math.random() - 0.5);
+    setShuffledData(shuffled);
+  }, []);
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
@@ -19,179 +29,45 @@ const BlogsCaseStudies = () => {
     <>
       <Navbar />
       <div className="blogs-case-studies">
-        <h1 className="bcsh1">Blogs & Case Studies</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Eleifend nec morbi tellus
-          vitae leo nunc.
-        </p>
-
         <div className="tabs">
+          {/* Left Rounded - Blogs */}
           <button
             className={`tab-button ${activeTab === "Blogs" ? "active" : ""}`}
             onClick={() => handleTabChange("Blogs")}
           >
             Blogs
           </button>
+
+          {/* Right Rounded - Case Studies */}
           <button
-            className={`tab-button1 ${
-              activeTab === "Case Studies" ? "active" : ""
-            }`}
+            className={`tab-button1 ${activeTab === "Case Studies" ? "active" : ""}`}
             onClick={() => handleTabChange("Case Studies")}
           >
             Case Studies
           </button>
         </div>
 
-        <div className="content">
-          {activeTab !== "Case Studies" && (
-            <div className="grid">
-              {/* Blog Cards */}
-              <BlogCard
-                id="1"
-                title="The Rise of Telemedicine: How Virtual Care is Revolutionizing Healthcare Delivery"
-                imageSrc="./Images/csaestudies.png"
-                description="Lorem ipsum doller foit amet Lorem ipsum doller foit
-                ametLorem ipsum doljer foit amet Lorem ipsum
-                doller foit amet Lorem? ipsum doller foit amet ipsum
-                doller foit amet ipsurndoller foit amet"
-                tag="Blog"
-                time="12 Min"
-                author="Maria Ledntsova"
-                authorImage="./Images/author.png"
-                date="March 12, 2024"
-              />
-              <BlogCard
-                id="2"
-                title="Telemedicine and Mental Health: Breaking Barriers to Access and Stigma"
-                imageSrc="./Images/csaestudies.png"
-                description="Lorem ipsum doller foit amet Lorem ipsum doller foit
-                ametLorem ipsum doljer foit amet Lorem ipsum
-                doller foit amet Lorem? ipsum doller foit amet ipsum
-                doller foit amet ipsurndoller foit amet"
-                tag="Blog"
-                time="12 Min"
-                author="Maria Ledntsova"
-                authorImage="./Images/author.png"
-                date="March 12, 2024"
-              />
-              <BlogCard
-                id="3"
-                title="Enhancing Guest Experience: Innovative Strategies for Modern Hotels"
-                imageSrc="./Images/csaestudies.png"
-                description="Lorem ipsum doller foit amet Lorem ipsum doller foit
-                ametLorem ipsum doljer foit amet Lorem ipsum
-                doller foit amet Lorem? ipsum doller foit amet ipsum
-                doller foit amet ipsurndoller foit amet"
-                tag="Blog"
-                time="12 Min"
-                author="Maria Ledntsova"
-                authorImage="./Images/author.png"
-                date="March 12, 2024"
-              />
-              <BlogCard
-                id="4"
-                title="Sustainable Practices in Hotel Management: Going Green Without Compromising Luxury"
-                imageSrc="./Images/csaestudies.png"
-                description="Lorem ipsum doller foit amet Lorem ipsum doller foit
-                ametLorem ipsum doljer foit amet Lorem ipsum
-                doller foit amet Lorem? ipsum doller foit amet ipsum
-                doller foit amet ipsurndoller foit amet"
-                tag="Blog"
-                time="12 Min"
-                author="Maria Ledntsova"
-                authorImage="./Images/author.png"
-                date="March 12, 2024"
-              />
-              <BlogCard
-                id="5"
-                title="The Impact of Fintech on Traditional Banking: Opportunities and Challenges"
-                imageSrc="./Images/csaestudies.png"
-                description="Lorem ipsum doller foit amet Lorem ipsum doller foit
-                ametLorem ipsum doljer foit amet Lorem ipsum
-                doller foit amet Lorem? ipsum doller foit amet ipsum
-                doller foit amet ipsurndoller foit amet"
-                tag="Blog"
-                time="12 Min"
-                author="Maria Ledntsova"
-                authorImage="./Images/author.png"
-                date="March 12, 2024"
-              />
-              <BlogCard
-                id="6"
-                title="Navigating the Future of Investment Banking: Trends and Innovations to Watch"
-                imageSrc="./Images/csaestudies.png"
-                description="Lorem ipsum doller foit amet Lorem ipsum doller foit
-                ametLorem ipsum doljer foit amet Lorem ipsum
-                doller foit amet Lorem? ipsum doller foit amet ipsum
-                doller foit amet ipsurndoller foit amet"
-                tag="Blog"
-                time="12 Min"
-                author="Maria Ledntsova"
-                authorImage="./Images/author.png"
-                date="March 12, 2024"
-              />
-              {/* Add more BlogCard components as needed */}
-            </div>
-          )}
+        <div className="content grid">
+          {/* Show All by default with random order */}
+          {activeTab === "" &&
+            shuffledData.map((item) =>
+              item.type === "Blog" ? (
+                <BlogCard key={`blog-${item.id}`} {...item} />
+              ) : (
+                <CaseStudyCard key={`case-${item.id}`} {...item} />
+              )
+            )}
 
-          {activeTab !== "Blogs" && (
-            <div className="grid">
-              {/* Case Study Cards */}
+          {/* Show only Blogs */}
+          {activeTab === "Blogs" &&
+            blogData.map((item) => <BlogCard key={`blog-${item.id}`} {...item} />)}
 
-              <CaseStudyCard
-                id="1"
-                title="QA Case Study"
-                imageSrc="./Images/csaestudies.png"
-                description="Lorem ipsum doller foit amet Lorem ipsum doller foit
-                ametLorem ipsum doljer foit amet Lorem ipsum
-                doller foit amet Lorem? ipsum doller foit amet ipsum
-                doller foit amet ipsurndoller foit amet"
-                tag="Case Study"
-                time="12 Min"
-                date="March 12, 2024"
-              />
-              <CaseStudyCard
-                id="2"
-                title="QA Case Study"
-                imageSrc="./Images/csaestudies.png"
-                description="Lorem ipsum doller foit amet Lorem ipsum doller foit
-                 ametLorem ipsum doljer foit amet Lorem ipsum
-                 oller foit amet Lorem? ipsum doller foit amet ipsum
-                 doller foit amet ipsurndoller foit amet"
-                tag="Case Study"
-                time="12 Min"
-                date="March 12, 2024"
-              />
-              <CaseStudyCard
-                id="3"
-                title="QA Case Study"
-                imageSrc="./Images/csaestudies.png"
-                description="Lorem ipsum doller foit amet Lorem ipsum doller foit
-                ametLorem ipsum doljer foit amet Lorem ipsum
-                 doller foit amet Lorem? ipsum doller foit amet ipsum
-                  doller foit amet ipsurndoller foit amet"
-                tag="Case Study"
-                time="12 Min"
-                date="March 12, 2024"
-              />
-              <CaseStudyCard
-                id="4"
-                title="QA Case Study"
-                imageSrc="./Images/csaestudies.png"
-                description="Lorem ipsum doller foit amet Lorem ipsum doller foit
-                ametLorem ipsum doljer foit amet Lorem ipsum
-                doller foit amet Lorem? ipsum doller foit amet ipsum
-                doller foit amet ipsurndoller foit amet"
-                tag="Case Study"
-                time="12 Min"
-                date="March 12, 2024"
-              />
-
-              {/* Add more CaseStudyCard components as needed */}
-            </div>
-          )}
+          {/* Show only Case Studies */}
+          {activeTab === "Case Studies" &&
+            caseStudyData.map((item) => <CaseStudyCard key={`case-${item.id}`} {...item} />)}
         </div>
       </div>
+
       <FAQSection />
       <ContactSection />
       <Footer />
@@ -200,3 +76,80 @@ const BlogsCaseStudies = () => {
 };
 
 export default BlogsCaseStudies;
+
+
+// import { useState } from "react";
+// import ContactSection from "../../components/ContactSection/contact";
+// import FAQSection from "../../components/FAQSection/faqSection";
+// import { Footer } from "../../components/Footer/footer";
+// import Navbar from "../../components/Header/header";
+// import "./blogsCaseStudies.css";
+// import { BlogCard, CaseStudyCard } from "./card";
+// import { blogData, caseStudyData } from "../../data/blog&CaseStudiesData";
+
+// const BlogsCaseStudies = () => {
+//   const [activeTab, setActiveTab] = useState(""); // empty means show all by default
+
+//   const handleTabChange = (tab) => {
+//     setActiveTab(tab);
+//   };
+
+//   return (
+//     <>
+//       <Navbar />
+//       <div className="blogs-case-studies">
+//         <div className="tabs">
+//           {/* Left Rounded - Blogs */}
+//           <button
+//             className={`tab-button ${activeTab === "Blogs" ? "active" : ""}`}
+//             onClick={() => handleTabChange("Blogs")}
+//           >
+//             Blogs
+//           </button>
+
+//           {/* Right Rounded - Case Studies */}
+//           <button
+//             className={`tab-button1 ${
+//               activeTab === "Case Studies" ? "active" : ""
+//             }`}
+//             onClick={() => handleTabChange("Case Studies")}
+//           >
+//             Case Studies
+//           </button>
+//         </div>
+
+//         <div className="content grid">
+//           {/* Show All by default */}
+//           {activeTab === "" && (
+//             <>
+//               {blogData.map((item) => (
+//                 <BlogCard key={`blog-${item.id}`} {...item} />
+//               ))}
+//               {caseStudyData.map((item) => (
+//                 <CaseStudyCard key={`case-${item.id}`} {...item} />
+//               ))}
+//             </>
+//           )}
+
+//           {/* Show only Blogs */}
+//           {activeTab === "Blogs" &&
+//             blogData.map((item) => (
+//               <BlogCard key={`blog-${item.id}`} {...item} />
+//             ))}
+
+//           {/* Show only Case Studies */}
+//           {activeTab === "Case Studies" &&
+//             caseStudyData.map((item) => (
+//               <CaseStudyCard key={`case-${item.id}`} {...item} />
+//             ))}
+//         </div>
+//       </div>
+
+//       <FAQSection />
+//       <ContactSection />
+//       <Footer />
+//     </>
+//   );
+// };
+
+// export default BlogsCaseStudies;

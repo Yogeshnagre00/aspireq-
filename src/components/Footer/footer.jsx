@@ -60,7 +60,7 @@ export const Footer = () => {
               <li>+91 9564251252</li>
               <li>info@aspireq.com</li>
               <li>
-                Aspireq 16 A, Karle Empire 2, <br /> Nanded City, Sinhgad Road,
+                Aspireq 16 A,<br /> Karle Empire 2, <br /> Nanded City, Sinhgad Road,
                 <br />
                 Pune - 411041
               </li>

@@ -104,9 +104,8 @@ const ContactForm = () => {
   return (
     <>
       <Navbar />
+      {/* Contact Us Form */}
       <div className="contact-form-container">
-        <h1 className="contacth1">Contact us</h1>
-
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-row">
             <div className="form-group">
