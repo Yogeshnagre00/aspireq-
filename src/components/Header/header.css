@@ -29,7 +29,8 @@ header {
 }
 
 .logo img {
-  height: 50px;
+  height: 45px;
+  width: 80%;
 }
 
 /* Button Styling */

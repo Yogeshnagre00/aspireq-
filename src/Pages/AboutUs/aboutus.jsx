@@ -1,11 +1,11 @@
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/effect-fade";
+import { Autoplay, EffectCoverflow } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Footer } from "../../components/Footer/footer";
 import Navbar from "../../components/Header/header";
 import "./aboutus.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCoverflow } from "swiper/modules";
-import "swiper/css/effect-fade";
-import "swiper/css";
-import "swiper/css/autoplay";
 // import { Autoplay } from "swiper/modules";
 
 const AbouttUs = () => {
@@ -87,45 +87,13 @@ const AbouttUs = () => {
       <section className="our-vision">
         <h2>Our Vision</h2>
         <div className="vision-container">
-          <div className="center-circle">
+          <div>
             <img
-              src="./Images/Frame 27319.png"
+              src="/Images/ourVision.png"
               alt="ASPIREQ Logo"
-              className="logo"
+              className="circleimage"
             />
           </div>
-
-          <div className="box top-left">
-            <h3>Reach the goal</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-              ipsum dolor sit amet.
-            </p>
-          </div>
-
-          <div className="box top-right">
-            <h3>Best Performance</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-              ipsum dolor sit amet.
-            </p>
-          </div>
-
-          <div className="box bottom-center">
-            <h3>Save time and Efforts</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-              ipsum dolor sit amet.
-            </p>
-          </div>
-
-          <div className="line top-left-line"></div>
-          <div className="line left-up"></div>
-          <div className="line top-right-line"></div>
-          <div className="line top-right-width"></div>
-          <div className="line top-right-height"></div>
-          <div className="line bottom-center-line"></div>
-          <div className="line bottom-center-width"></div>
         </div>
       </section>
       {/* Feature SEction */}
