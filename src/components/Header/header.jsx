@@ -24,7 +24,7 @@ const Navbar = () => {
     <header>
       <nav className="navbar">
         <div className="logo">
-          <img src="/Images/logo.png" alt="Logo" />
+          <img src="/Images/asoireq red.png" alt="Logo" />
         </div>
 
         <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
