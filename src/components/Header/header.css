@@ -1,15 +1,16 @@
 /* CSS Variables */
 :root {
-  --header-bg-color: white;
+  --header-bg-color: #ffffff;
   --header-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --navbar-padding: 0 5rem;
-  --nav-link-color: #555;
+  --navbar-padding-desktop: 0 5rem;
+  --navbar-padding-mobile: 0 1rem;
+  --nav-link-color: #181818;
   --nav-link-hover-color: #2b4d82;
   --btn-bg-color: #1ea0ff;
-  --btn-hover-bg-color: #1ea0ff;
+  --btn-hover-bg-color: #188de0;
 }
 
-/* Default mobile header styles */
+/* Header */
 header {
   background-color: var(--header-bg-color);
   box-shadow: var(--header-box-shadow);
@@ -25,51 +26,61 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--navbar-padding);
+  padding: var(--navbar-padding-desktop);
 }
 
+/* Logo */
 .logo img {
   height: 32px;
-  width: 100%;
+  width: auto;
 }
 
-/* Button Styling */
+/* CTA Button */
 .btn {
   background-color: var(--btn-bg-color);
-  color: white;
+  color: #fff;
   padding: 10px 25px;
   border-radius: 60px;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
+  font-size: 15px;
+  white-space: nowrap;
 }
 
-/* Hamburger Icon for mobile */
+.btn:hover {
+  background-color: var(--btn-hover-bg-color);
+}
+
+/* Hamburger Icon */
 .hamburger {
   display: none;
   font-size: 25px;
   cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--nav-link-color);
 }
 
-/* Navbar links */
+/* Navigation Links */
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 50px;
+  list-style: none;
 }
 
-/* Link Styles */
 .nav-links a {
   text-decoration: none;
-  color: #181818;
+  color: var(--nav-link-color);
   font-size: 15px;
   padding: 10px 0;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: var(--nav-link-hover-color);
 }
+
 .active-link {
   color: var(--nav-link-hover-color);
   font-weight: bold;
@@ -79,10 +90,10 @@ header {
   visibility: hidden;
 }
 
-/* Mobile-Specific Styles */
+/* ========== Tablets and Mobile ========== */
 @media (max-width: 768px) {
   .navbar {
-    padding: 0 1rem;
+    padding: var(--navbar-padding-mobile);
   }
 
   .hamburger {
@@ -91,14 +102,15 @@ header {
 
   .nav-links {
     display: none;
+    flex-direction: column;
     position: absolute;
     top: 60px;
     right: 0;
-    /* width: 100%; */
     background-color: var(--header-bg-color);
-    flex-direction: column;
-    padding: 0;
-    gap: 12px;
+    width: 100%;
+    padding: 10px 0;
+    gap: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.active {
@@ -107,35 +119,65 @@ header {
 
   .nav-links a {
     padding: 15px;
-    font-size: 18px;
-    width: 100%;
+    font-size: 16px;
     text-align: center;
+    width: 100%;
   }
 
   .btn {
-    margin-left: 100px;
-    padding: 7px 20px;
-    margin-top: 8px;
-    white-space: nowrap;
+    margin: 8px auto 0 auto;
+    display: block;
+    padding: 8px 20px;
+    font-size: 14px;
   }
 
   .logo img {
+    height: 28px;
     margin-right: 10px;
   }
 }
 
+/* ========== Small Phones (480px and below) ========== */
 @media (max-width: 480px) {
   .nav-links a {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .btn {
-    font-size: 15px;
-    margin-left: 80px;
-    padding: 6px 10px;
+    font-size: 14px;
+    padding: 7px 15px;
   }
 
   .logo img {
-    height: 25px;
+    height: 24px;
+  }
+}
+
+/* ========== Very Small Devices (e.g., 360px and below) ========== */
+@media (max-width: 360px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .btn {
+    font-size: 12px;
+    margin-right: 10px;
+    padding: 6px 12px;
+  }
+
+  .logo img {
+    height: 20px;
+  }
+
+  .hamburger {
+    font-size: 22px;
   }
 }
