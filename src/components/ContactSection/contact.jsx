@@ -45,7 +45,14 @@ const ContactSection = () => {
             Email successfully submitted.
             <br />
             <br />
-            <span>&nbsp;</span> Thank you! Will reachout to you soon.
+            <i
+              className="fa-solid fa-circle-check"
+              style={{
+                color: "#0daf36",
+                marginLeft: "-15px",
+                marginRight: "10px",
+              }}
+            ></i>Thank you! We will reach out to you soon.
           </>
         );
         setEmail("");
