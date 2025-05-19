@@ -2,6 +2,8 @@ import React, { Suspense } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import NotFound from "./components/notFound";
+import ApplyForm from "./Pages/careerPage/ApplyForm.jsx";
+import CareerPage from "./Pages/careerPage/CareerPage.jsx";
 
 const AboutUs = React.lazy(() => import("./Pages/AboutUs/aboutus.jsx"));
 
@@ -29,6 +31,8 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/blogscasestudies" element={<BlogsCaseStudies />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/careers" element={<CareerPage />} />
+          <Route path="/apply" element={<ApplyForm />} />
           <Route path="/contactus" element={<ContactForm />} />
           <Route path="/cookiespolicy" element={<CookiesPolicy />} />
           <Route path="privacypolicy" element={<PrivacyPolicy />} />

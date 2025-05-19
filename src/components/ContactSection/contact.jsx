@@ -7,15 +7,25 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
+  const [emailError, setEmailError] = useState(""); 
+
   const location = useLocation();
 
-  const handleChange = (e) => setEmail(e.target.value);
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+    setEmailError(""); 
+  };
+
+  const validateEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!email.trim()) {
-      setModalMessage("Please enter a valid email address.");
-      setShowModal(true);
+
+    if (!email.trim() || !validateEmail(email)) {
+      setEmailError("Please enter a valid email address.");
       return;
     }
 
@@ -26,7 +36,6 @@ const ContactSection = () => {
         {
           method: "POST",
           headers: { "Content-Type": "text/plain; charset-utf-8" },
-
           body: JSON.stringify({ Email: email }),
         }
       );
@@ -52,31 +61,24 @@ const ContactSection = () => {
                 marginLeft: "-15px",
                 marginRight: "10px",
               }}
-            ></i>Thank you! We will reach out to you soon.
+            ></i>
+            Thank you! We will reach out to you soon.
           </>
         );
         setEmail("");
+        setShowModal(true);
       } else {
         setModalMessage(
-          <>
-            <i
-              className="fa-solid fa-circle-xmark"
-              style={{
-                color: "#a82424",
-                marginRight: "10px",
-              }}
-            ></i>
-            There was an error submitting your email. Please try again.
-          </>
+          "There was an error submitting your email. Please try again."
         );
+        setShowModal(true);
       }
     } catch (error) {
-      console.error("Error during submission:", error);
       setModalMessage(
         "An error occurred while submitting your email. Please try again."
       );
-    } finally {
       setShowModal(true);
+    } finally {
       setIsSubmitting(false);
     }
   };
@@ -85,22 +87,25 @@ const ContactSection = () => {
 
   return (
     <>
-      <section className="contact-section">
+      <section className="contact">
         <div className="contact-container">
           <h1>
             Get started with a free 30-minute consultation with an expert.
           </h1>
-          <form className="inputWithButton" onSubmit={handleSubmit}>
-            <input
-              type="email"
-              placeholder="Enter Your Email Address"
-              value={email}
-              onChange={handleChange}
-            />
-            <button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit"}{" "}
-              {!isSubmitting && <span></span>}
-            </button>
+          <form className="inputWithButtonWrapper" onSubmit={handleSubmit}>
+            <div className="inputWithButton">
+              <input
+                type="email"
+                placeholder="Enter Your Email Address"
+                value={email}
+                onChange={handleChange}
+              />
+              <button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}{" "}
+                {!isSubmitting && <span></span>}
+              </button>
+            </div>
+            {emailError && <div className="email-error">{emailError}</div>}
           </form>
         </div>
       </section>

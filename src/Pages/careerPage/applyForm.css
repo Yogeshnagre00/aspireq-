@@ -1,0 +1,49 @@
+.apply-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .apply-form input,
+  .apply-form textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .apply-form input:focus,
+  .apply-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .apply-form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .apply-form button {
+    padding: 0.9rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-form button:hover {
+    background-color: #0056b3;
+  }
+  

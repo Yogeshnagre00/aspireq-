@@ -24,7 +24,7 @@ const Navbar = () => {
     <header>
       <nav className="navbar">
         <div className="logo">
-          <img src="/Images/asoireq red.png" alt="Logo" />
+          <img src="/Images/logo.png" alt="Logo" />
         </div>
 
         <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
@@ -47,13 +47,13 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/aboutus" className={isActive("/aboutus")}>
-              ABOUT US
+            <Link to="/careers" className={isActive("/careers")}>
+              CAREERS
             </Link>
           </li>
           <li>
-            <Link to="/contactUs" className={isActive("/contactUs")}>
-              CONTACT US
+            <Link to="/aboutus" className={isActive("/aboutus")}>
+              ABOUT US
             </Link>
           </li>
         </ul>
