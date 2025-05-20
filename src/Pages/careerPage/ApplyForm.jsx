@@ -19,7 +19,14 @@ const ApplyForm = () => {
       <input
         type="text"
         name="name"
-        placeholder="Your Name"
+        placeholder="Last Name"
+        onChange={handleChange}
+        required
+      />
+      <input
+        type="text"
+        name="name"
+        placeholder="Last Name"
         onChange={handleChange}
         required
       />
