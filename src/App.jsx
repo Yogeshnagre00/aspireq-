@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
-import CookieConsent from "./components/Cookies/CookieConsent.jsx";
 import NotFound from "./components/notFound";
 import ApplyForm from "./Pages/careerPage/ApplyForm.jsx";
 
@@ -29,7 +28,7 @@ function App() {
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
-        <CookieConsent />
+        {/* <CookieConsent /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
