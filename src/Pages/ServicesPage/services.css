@@ -95,7 +95,7 @@
 }
 
 .vision-card-description {
-  font-size: 16px;
+  font-size: 15px;
   color: #6c757d;
   text-align: center;
   line-height: 1.6;
@@ -328,7 +328,6 @@ p {
 /* Responsive design for smaller mobile devices */
 @media (max-width: 480px) {
   .services-header {
-
     color: rgb(235, 233, 233);
     margin-top: 17%;
     cursor: pointer;
