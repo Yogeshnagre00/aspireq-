@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
+import CookieConsent from "./components/Cookies/CookieConsent.jsx";
 import NotFound from "./components/notFound";
 import ApplyForm from "./Pages/careerPage/ApplyForm.jsx";
-import CareerPage from "./Pages/careerPage/CareerPage.jsx";
 
 const AboutUs = React.lazy(() => import("./Pages/AboutUs/aboutus.jsx"));
 
@@ -11,6 +11,9 @@ const Services = React.lazy(() => import("./Pages/ServicesPage/services"));
 
 const BlogsCaseStudies = React.lazy(() =>
   import("./Pages/Blogs&CaseStudies/blogsCaseStudies")
+);
+const CareerPage = React.lazy(() =>
+  import("./Pages/careerPage/CareerPage.jsx")
 );
 const PrivacyPolicy = React.lazy(() =>
   import("./components/PrivacyPolicy/privacyPolicy")
@@ -26,6 +29,7 @@ function App() {
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
+        <CookieConsent />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />

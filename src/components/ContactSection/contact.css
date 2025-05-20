@@ -147,7 +147,7 @@
 }
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .contact-section {
+  .contact {
     max-width: 85%;
     height: auto;
     border-radius: 30px;
@@ -191,7 +191,7 @@
     padding: 3px 8px;
   }
 }
-.contact-section {
+.contact {
   display: flex;
   max-width: 60%;
   margin: 0 auto 5%;
@@ -333,7 +333,7 @@
 }
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .contact-section {
+  .contact {
     max-width: 85%;
     height: auto;
     border-radius: 30px;
