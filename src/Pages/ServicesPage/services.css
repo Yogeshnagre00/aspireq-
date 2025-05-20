@@ -328,7 +328,7 @@ p {
 /* Responsive design for smaller mobile devices */
 @media (max-width: 480px) {
   .services-header {
-    background-color: #1ea0ff;
+    margin-top:6%;
     color: rgb(235, 233, 233);
     cursor: pointer;
     padding: 7px;
