@@ -329,6 +329,7 @@ p {
 @media (max-width: 480px) {
   .services-header {
     color: rgb(235, 233, 233);
+    margin-top: 17%;
     cursor: pointer;
     padding: 7px;
     position: relative;
