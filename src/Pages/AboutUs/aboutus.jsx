@@ -6,13 +6,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Footer } from "../../components/Footer/footer";
 import Navbar from "../../components/Header/header";
 import "./aboutus.css";
-// import { Autoplay } from "swiper/modules";
 
 const AbouttUs = () => {
   return (
     <>
       <Navbar />
-
       <section className="about-section">
         {/* Who We Are Section */}
         <div className="about-card">
