@@ -39,18 +39,27 @@
   align-items: center;
   margin-top: 30px;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  padding-bottom: 20px;
 }
-/* Added: Ensure logo is centered in its column */
-.footer-logo img {
-  max-width: 100%;
-  height: auto;
+.map-container {
+  width: 100%;
+  max-width: 515px;
+  height: 200px; /* Fixed height */
+  position: relative;
+  overflow: hidden;
 }
 
-.footer-text {
-  width: 30%;
-  /* margin-top: 30px; */
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
-
 /* Footer Heading styles */
 .footer-heading {
   font-size: 1.2em;
@@ -80,22 +89,6 @@
 
 .footer-contact li {
   color: #333;
-}
-.map-container {
-  width: 100%;
-  max-width: 500px;
-  position: relative;
-  overflow: hidden;
-  padding-top: 56.25%;
-}
-
-.map-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60%;
-  border: none;
 }
 
 /* Adjusted text alignment for social media icons */

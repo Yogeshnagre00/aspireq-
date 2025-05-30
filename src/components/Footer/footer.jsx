@@ -21,7 +21,10 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#">Terms of Service</a>
+                <a href="/termsofservice"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Terms of Service</a>
               </li>
               <li>
                 <a
@@ -85,7 +88,7 @@ export const Footer = () => {
             Copyright ©2025 aspireq. All rights reserved.
           </p>
           <div className="footer-social">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/aspireq/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
               <i
                 className="fa-brands fa-linkedin"
                 style={{ color: "#1159d4" }}
