@@ -4,7 +4,7 @@ import "./App.css";
 import NotFound from "./components/notFound";
 // import ApplyForm from "./Pages/careerPage/ApplyForm.jsx";
 
-const AboutUs = React.lazy(() => import("./Pages/AboutUs/aboutUs.jsx"));
+const AboutUs = React.lazy(() => import("./Pages/AboutUs/aboutus.jsx"));
 
 const Services = React.lazy(() => import("./Pages/ServicesPage/services"));
 
