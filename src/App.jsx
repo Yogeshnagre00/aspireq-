@@ -2,18 +2,19 @@ import React, { Suspense } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import NotFound from "./components/notFound";
-import ApplyForm from "./Pages/careerPage/ApplyForm.jsx";
+// import ApplyForm from "./Pages/careerPage/ApplyForm.jsx";
 
-const AboutUs = React.lazy(() => import("./Pages/AboutUs/aboutus.jsx"));
+const AboutUs = React.lazy(() => import("./Pages/AboutUs/aboutUs.jsx"));
 
 const Services = React.lazy(() => import("./Pages/ServicesPage/services"));
 
 const BlogsCaseStudies = React.lazy(() =>
   import("./Pages/Blogs&CaseStudies/blogsCaseStudies")
 );
-const CareerPage = React.lazy(() =>
-  import("./Pages/careerPage/CareerPage.jsx")
-);
+const ProductsPage = React.lazy(() => import("./Pages/ProductsPage/products"));
+// const CareerPage = React.lazy(() =>
+//   import("./Pages/careerPage/CareerPage.jsx")
+// );
 const PrivacyPolicy = React.lazy(() =>
   import("./components/PrivacyPolicy/privacyPolicy")
 );
@@ -34,10 +35,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/products" element={<ProductsPage />} />
           <Route path="/blogscasestudies" element={<BlogsCaseStudies />} />
           <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/careers" element={<CareerPage />} />
-          <Route path="/apply" element={<ApplyForm />} />
+          {/* <Route path="/careers" element={<CareerPage />} /> */}
+          {/* <Route path="/apply" element={<ApplyForm />} /> */}
           <Route path="/contactus" element={<ContactForm />} />
           <Route path="/cookiespolicy" element={<CookiesPolicy />} />
           <Route path="privacypolicy" element={<PrivacyPolicy />} />

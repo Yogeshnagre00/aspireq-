@@ -39,18 +39,23 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
+            <Link to="/products" className={isActive("/products")}>
+              PRODUCTS
+            </Link>
+          </li>
+          {/* <li>
             <Link
               to="/blogscasestudies"
               className={isActive("/blogscasestudies")}
             >
               BLOGS & CASE STUDIES
             </Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Link to="/careers" className={isActive("/careers")}>
               CAREERS
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/aboutus" className={isActive("/aboutus")}>
               ABOUT US
