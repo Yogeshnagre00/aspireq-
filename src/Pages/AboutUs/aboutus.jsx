@@ -5,7 +5,7 @@ import { Autoplay, EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Footer } from "../../components/Footer/footer";
 import Navbar from "../../components/Header/header";
-import "./aboutUs.css";
+import "./aboutus.css";
 
 const AboutUs = () => {
   // Function to format text by adding a dot before each point
